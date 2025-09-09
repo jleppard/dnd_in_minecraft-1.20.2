@@ -1,0 +1,12 @@
+{
+  "item.dnd_in_minecraft.copper_piece": "Copper Piece",
+  "item.dnd_in_minecraft.gold_piece": "Gold Piece",
+  "item.dnd_in_minecraft.silver_piece": "Silver Piece",
+
+  "block.dnd_in_minecraft.silver_block": "Block of Silver",
+
+  "itemgroup.currency": "Currencies",
+  "itemgroup.ores": "Ores"
+
+
+}

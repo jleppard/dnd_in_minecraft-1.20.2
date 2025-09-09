@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dnd_in_minecraft:block/silver_block"
+  }
+}

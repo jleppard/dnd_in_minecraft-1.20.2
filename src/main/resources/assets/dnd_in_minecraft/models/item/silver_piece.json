@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-  "textures": {
-    "layer0": "dnd_in_minecraft:item/silver_piece"
-  }
-}

@@ -16,6 +16,8 @@ public class ModBlocks {
     public static final Block SILVER_BLOCK = registerBlock("silver_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK)));
 
+    public static final Block SILVER_ORE = registerBlock("silver_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
 
 
 

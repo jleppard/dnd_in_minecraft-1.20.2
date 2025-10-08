@@ -2,7 +2,6 @@ package net.willow.dndinmc.datagen;
 
 
 
-import com.mojang.datafixers.types.templates.Tag;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.advancement.AdvancementCriterion;
@@ -10,27 +9,24 @@ import net.minecraft.block.Block;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
-import net.minecraft.loot.entry.TagEntry;
-import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.willow.dndinmc.Block.ModBlocks;
-import net.willow.dndinmc.item.Moditems;
 
 import java.util.List;
 
-import static net.minecraft.data.server.recipe.RecipeProvider.*;
 import static net.minecraft.recipe.book.RecipeCategory.*;
 import static net.willow.dndinmc.Block.ModBlocks.SILVER_BLOCK;
 import static net.willow.dndinmc.item.Moditems.*;
 import static net.willow.dndinmc.item.Moditems.SILVER_NUGGET;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
-    private static final List<ItemConvertible> SILVER_SMEALT = List.of(ModBlocks.SILVER_ORE);
+    private static final List<ItemConvertible> SILVER_SMELT = List.of(ModBlocks.SILVER_ORE);
 
     public ModRecipeProvider(FabricDataOutput output) {
         super(output);
@@ -39,8 +35,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
 
-        offerSmelting(exporter, SILVER_SMEALT, MISC, SILVER_INGOT, 0.7f, 200, "silver_ingot");
-        offerBlasting(exporter, SILVER_SMEALT, MISC, SILVER_INGOT, 0.7f, 100, "silver_ingot");
+        offerSmelting(exporter, SILVER_SMELT, MISC, SILVER_INGOT, 0.7f, 200, "silver_ingot");
+        offerBlasting(exporter, SILVER_SMELT, MISC, SILVER_INGOT, 0.7f, 100, "silver_ingot");
 
     offerReversibleCompactingRecipes(exporter, BUILDING_BLOCKS, SILVER_INGOT, DECORATIONS, SILVER_BLOCK);
 
@@ -59,285 +55,263 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(SILVER_INGOT),conditionsFromItem(SILVER_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(SILVER_NUGGET)));
 
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_CLUB, 1)
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_CLUB, 1)
                 .pattern("  @")
                 .pattern(" ! ")
                 .pattern("!  ")
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_CLUB)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_GREATCLUB, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_CLUB)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_GREATCLUB, 1)
                 .pattern("  #")
-                .pattern(" @")
+                .pattern(" @ ")
                 .pattern("!  ")
-                .input('#', ItemTags.PLANKS)
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_GREATCLUB)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_HANDAXE, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_GREATCLUB)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_HANDAXE, 1)
                 .pattern(" @@")
                 .pattern(" !@")
                 .pattern(" ! ")
 
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_HANDAXE)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_JAVELIN, 1)
-                .pattern("   ")
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_HANDAXE)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_JAVELIN, 1)
                 .pattern("!@#")
-                .pattern("   ")
-                .input('#', ItemTags.PLANKS)
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_JAVELIN)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_LIGHT_HAMMER, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_JAVELIN)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_LIGHT_HAMMER, 1)
                 .pattern(" @ ")
                 .pattern("@!@")
                 .pattern(" ! ")
 
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_LIGHT_HAMMER)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_MACE, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_LIGHT_HAMMER)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_MACE, 1)
                 .pattern("@#@")
                 .pattern("#!#")
                 .pattern(" ! ")
-                .input('#', ItemTags.PLANKS)
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_MACE)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_QUARTERSTAFF, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_MACE)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_QUARTERSTAFF, 1)
                 .pattern(" @ ")
                 .pattern(" ! ")
                 .pattern(" @ ")
 
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_QUARTERSTAFF)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_SICKLE, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_QUARTERSTAFF)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_SICKLE, 1)
                 .pattern(" @@")
                 .pattern(" ! ")
                 .pattern(" ! ")
 
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_SICKLE)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_SPEAR, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_SICKLE)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_SPEAR, 1)
                 .pattern("!!#")
-                .input('#', ItemTags.PLANKS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
 
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_SPEAR)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_CLUB, 1)
-                .pattern("  @")
-                .pattern(" ! ")
-                .pattern("!  ")
-
-                .input('@', ItemTags.WOODEN_BUTTONS)
-                .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_CLUB)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_BATTLEAXE, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_SPEAR)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_BATTLEAXE, 1)
                 .pattern(" ##")
                 .pattern(" !#")
                 .pattern(" ! ")
-                .input('#', ItemTags.PLANKS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
 
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_BATTLEAXE)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_FLAIL, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_BATTLEAXE)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_FLAIL, 1)
                 .pattern(" # ")
                 .pattern(" $ ")
                 .pattern(" ! ")
-                .input('#', ItemTags.PLANKS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
 
                 .input('!', Items.STICK)
                 .input('$', Items.CHAIN)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_FLAIL)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_CLUB, 1)
-                .pattern("  @")
-                .pattern(" ! ")
-                .pattern("!  ")
-
-                .input('@', ItemTags.WOODEN_BUTTONS)
-                .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_CLUB)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_GREATAXE, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_FLAIL)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_GREATAXE, 1)
                 .pattern("###")
                 .pattern("#!#")
                 .pattern(" ! ")
-                .input('#', ItemTags.PLANKS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_GREATAXE)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_GREATSWORD, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_GREATAXE)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_GREATSWORD, 1)
                 .pattern(" # ")
                 .pattern("###")
                 .pattern(" ! ")
-                .input('#', ItemTags.PLANKS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
 
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_GREATAXE)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_HALBERD, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_GREATSWORD)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_HALBERD, 1)
                 .pattern(" ##")
                 .pattern("@!#")
                 .pattern(" ! ")
-                .input('#', ItemTags.PLANKS)
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_HALBERD)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_LANCE, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_HALBERD)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_LANCE, 1)
                 .pattern(" ##")
                 .pattern(" !#")
                 .pattern("!  ")
-                .input('#', ItemTags.PLANKS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
 
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_LANCE)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_LONGSWORD, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_LANCE)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_LONGSWORD, 1)
                 .pattern(" # ")
                 .pattern(" # ")
                 .pattern(" ! ")
-                .input('#', ItemTags.PLANKS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
 
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_LONGSWORD)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_MAUL, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_LONGSWORD)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_MAUL, 1)
                 .pattern("@#@")
                 .pattern("#!#")
                 .pattern(" ! ")
-                .input('#', ItemTags.PLANKS)
-
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_MAUL)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_MORNINGSTAR, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_MAUL)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_MORNINGSTAR, 1)
                 .pattern(" @ ")
                 .pattern("@#@")
                 .pattern(" ! ")
-
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_MORNINGSTAR)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_PIKE, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_MORNINGSTAR)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_PIKE, 1)
                 .pattern("  #")
                 .pattern(" ! ")
                 .pattern("!  ")
-                .input('#', ItemTags.PLANKS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
 
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_PIKE)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_RAPIER, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_PIKE)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_RAPIER, 1)
                 .pattern(" @ ")
                 .pattern("@@@")
                 .pattern(" ! ")
 
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_RAPIER)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_SCIMITAR, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_RAPIER)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_SCIMITAR, 1)
                 .pattern("  @")
                 .pattern(" # ")
                 .pattern(" ! ")
-                .input('#', ItemTags.PLANKS)
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_SCIMITAR)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_SHORTSWORD, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_SCIMITAR)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_SHORTSWORD, 1)
                 .pattern(" @ ")
                 .pattern(" # ")
                 .pattern(" ! ")
-                .input('#', ItemTags.PLANKS)
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_SHORTSWORD)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_TRIDENT, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_SHORTSWORD)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_TRIDENT, 1)
                 .pattern(" #@")
-                .pattern("!#@ ")
+                .pattern("!#@")
                 .pattern(" #@")
-                .input('#', ItemTags.PLANKS)
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_TRIDENT)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_WAR_PICK, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_TRIDENT)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_WAR_PICK, 1)
                 .pattern(" #@")
                 .pattern(" ! ")
-                .pattern(" !  ")
-                .input('#', ItemTags.PLANKS)
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .pattern(" ! ")
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_WAR_PICK)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_WHIP, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_WAR_PICK)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_WHIP, 1)
                 .pattern("  @")
                 .pattern("%% ")
                 .pattern("!  ")
 
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
                 .input('%', Items.STRING)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_WHIP)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_DAGGER, 1)
-                .pattern("@")
-                .pattern("!")
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_WHIP)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_DAGGER, 1)
+                .pattern(" @ ")
+                .pattern(" ! ")
 
-                .input('@', ItemTags.WOODEN_BUTTONS)
+                .input('@', ItemTags.STONE_BUTTONS)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_DAGGER)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_GLAIVE, 1)
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_DAGGER)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_GLAIVE, 1)
                 .pattern(" ##")
                 .pattern(" !#")
                 .pattern("!  ")
-                .input('#', ItemTags.PLANKS)
+                .input('#', ItemTags.STONE_TOOL_MATERIALS)
 
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_GLAIVE)));
-        ShapedRecipeJsonBuilder.create(COMBAT, WOODEN_DOUBLE_BLADED_SCIMITAR, 1)
-                .pattern("@")
-                .pattern("!")
-                .pattern("@")
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_GLAIVE)));
+        ShapedRecipeJsonBuilder.create(COMBAT, STONE_DOUBLE_BLADED_SCIMITAR, 1)
+                .pattern(" @ ")
+                .pattern(" ! ")
+                .pattern(" @ ")
 
-                .input('@', WOODEN_SCIMITAR)
+                .input('@', STONE_SCIMITAR)
                 .input('!', Items.STICK)
-                .criterion(hasItem(BlockTags.PLANKS),conditionsFromItem(BlockTags.PLANKS))
-                .offerTo(exporter, new Identifier(getRecipeName(WOODEN_DOUBLE_BLADED_SCIMITAR)));
+                .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
+                .offerTo(exporter, new Identifier(getRecipeName(STONE_DOUBLE_BLADED_SCIMITAR)));
 
 
 
 
     }
 
-    private String hasItem(TagKey<Block> planks) {
-        return null;
+    private String hasItem(TagKey<Item> itemTagKey) {
+        return "has_" + itemTagKey.id().toTranslationKey();
     }
 
 
-    private AdvancementCriterion<?> conditionsFromItem(TagKey<Block> planks) {
-        return null;
-    }
 }
+

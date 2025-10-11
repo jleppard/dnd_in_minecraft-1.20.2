@@ -16,7 +16,7 @@
   "item.dnd_in_minecraft.wooden_dagger": "Wooden Dagger",
   "item.dnd_in_minecraft.wooden_greatclub": "Wooden Greatclub",
   "item.dnd_in_minecraft.wooden_handaxe": "Wooden Handaxe",
-  "item.dnd_in_minecraft.wooden_Javelin": "Wooden Javelin",
+  "item.dnd_in_minecraft.wooden_javelin": "Wooden Javelin",
   "item.dnd_in_minecraft.wooden_light_hammer": "Wooden Light Hammer",
   "item.dnd_in_minecraft.wooden_mace": "Wooden Mace",
   "item.dnd_in_minecraft.wooden_quarterstaff": "Wooden Quarterstaff",
@@ -40,6 +40,8 @@
   "item.dnd_in_minecraft.wooden_shortsword": "Wooden Shortsword",
   "item.dnd_in_minecraft.wooden_trident": "Wooden Trident",
   "item.dnd_in_minecraft.wooden_warhammer": "Wooden Warhammer",
+  "item.dnd_in_minecraft.wooden_lance": "Wooden Lance",
+  "item.dnd_in_minecraft.wooden_longsword": "Wooden Longsword",
   "item.dnd_in_minecraft.wooden_war_pick": "Wooden War Pick",
   "item.dnd_in_minecraft.wooden_whip": "Wooden Whip",
   "item.dnd_in_minecraft.wooden_blowgun": "Wooden Blowgun",
@@ -53,7 +55,7 @@
   "item.dnd_in_minecraft.stone_dagger": "Stone Dagger",
   "item.dnd_in_minecraft.stone_greatclub": "Stone Greatclub",
   "item.dnd_in_minecraft.stone_handaxe": "Stone Handaxe",
-  "item.dnd_in_minecraft.stone_Javelin": "Stone Javelin",
+  "item.dnd_in_minecraft.stone_javelin": "Stone Javelin",
   "item.dnd_in_minecraft.stone_light_hammer": "Stone Light Hammer",
   "item.dnd_in_minecraft.stone_mace": "Stone Mace",
   "item.dnd_in_minecraft.stone_quarterstaff": "Stone Quarterstaff",
@@ -85,12 +87,14 @@
   "item.dnd_in_minecraft.stone_longbow": "Stone Longbow",
   "item.dnd_in_minecraft.stone_musket": "Stone Musket",
   "item.dnd_in_minecraft.stone_pistol": "Stone Pistol",
+  "item.dnd_in_minecraft.stone_lance": "Stone Lance",
+  "item.dnd_in_minecraft.stone_longsword": "Stone Longsword",
 
   "item.dnd_in_minecraft.iron_club": "Iron Club",
   "item.dnd_in_minecraft.iron_dagger": "Iron Dagger",
   "item.dnd_in_minecraft.iron_greatclub": "Iron Greatclub",
   "item.dnd_in_minecraft.iron_handaxe": "Iron Handaxe",
-  "item.dnd_in_minecraft.iron_Javelin": "Iron Javelin",
+  "item.dnd_in_minecraft.iron_javelin": "Iron Javelin",
   "item.dnd_in_minecraft.iron_light_hammer": "Iron Light Hammer",
   "item.dnd_in_minecraft.iron_mace": "Iron Mace",
   "item.dnd_in_minecraft.iron_quarterstaff": "Iron Quarterstaff",
@@ -122,13 +126,14 @@
   "item.dnd_in_minecraft.iron_longbow": "Iron Longbow",
   "item.dnd_in_minecraft.iron_musket": "Iron Musket",
   "item.dnd_in_minecraft.iron_pistol": "Iron Pistol",
-
+  "item.dnd_in_minecraft.iron_lance": "Iron Lance",
+  "item.dnd_in_minecraft.iron_longsword": "Iron Longsword",
 
   "item.dnd_in_minecraft.diamond_club": "Diamond Club",
   "item.dnd_in_minecraft.diamond_dagger": "Diamond Dagger",
   "item.dnd_in_minecraft.diamond_greatclub": "Diamond Greatclub",
   "item.dnd_in_minecraft.diamond_handaxe": "Diamond Handaxe",
-  "item.dnd_in_minecraft.diamond_Javelin": "Diamond Javelin",
+  "item.dnd_in_minecraft.diamond_javelin": "Diamond Javelin",
   "item.dnd_in_minecraft.diamond_light_hammer": "Diamond Light Hammer",
   "item.dnd_in_minecraft.diamond_mace": "Diamond Mace",
   "item.dnd_in_minecraft.diamond_quarterstaff": "Diamond Quarterstaff",
@@ -160,13 +165,14 @@
   "item.dnd_in_minecraft.diamond_longbow": "Diamond Longbow",
   "item.dnd_in_minecraft.diamond_musket": "Diamond Musket",
   "item.dnd_in_minecraft.diamond_pistol": "Diamond Pistol",
-
+  "item.dnd_in_minecraft.diamond_lance": "Diamond Lance",
+  "item.dnd_in_minecraft.diamond_longsword": "Diamond Longsword",
 
   "item.dnd_in_minecraft.netherite_club": "Netherite Club",
   "item.dnd_in_minecraft.netherite_dagger": "Netherite Dagger",
   "item.dnd_in_minecraft.netherite_greatclub": "Netherite Greatclub",
   "item.dnd_in_minecraft.netherite_handaxe": "Netherite Handaxe",
-  "item.dnd_in_minecraft.netherite_Javelin": "Netherite Javelin",
+  "item.dnd_in_minecraft.netherite_javelin": "Netherite Javelin",
   "item.dnd_in_minecraft.netherite_light_hammer": "Netherite Light Hammer",
   "item.dnd_in_minecraft.netherite_mace": "Netherite Mace",
   "item.dnd_in_minecraft.netherite_quarterstaff": "Netherite Quarterstaff",
@@ -198,12 +204,14 @@
   "item.dnd_in_minecraft.netherite_longbow": "Netherite Longbow",
   "item.dnd_in_minecraft.netherite_musket": "Netherite Musket",
   "item.dnd_in_minecraft.netherite_pistol": "Netherite Pistol",
+  "item.dnd_in_minecraft.netherite_lance": "Netherite Lance",
+  "item.dnd_in_minecraft.netherite_longsword": "Netherite Longsword",
 
   "item.dnd_in_minecraft.adamantite_club": "Adamantite Club",
   "item.dnd_in_minecraft.adamantite_dagger": "Adamantite Dagger",
   "item.dnd_in_minecraft.adamantite_greatclub": "Adamantite Greatclub",
   "item.dnd_in_minecraft.adamantite_handaxe": "Adamantite Handaxe",
-  "item.dnd_in_minecraft.adamantite_Javelin": "Adamantite Javelin",
+  "item.dnd_in_minecraft.adamantite_javelin": "Adamantite Javelin",
   "item.dnd_in_minecraft.adamantite_light_hammer": "Adamantite Light Hammer",
   "item.dnd_in_minecraft.adamantite_mace": "Adamantite Mace",
   "item.dnd_in_minecraft.adamantite_quarterstaff": "Adamantite Quarterstaff",
@@ -235,13 +243,15 @@
   "item.dnd_in_minecraft.adamantite_longbow": "Adamantite Longbow",
   "item.dnd_in_minecraft.adamantite_musket": "Adamantite Musket",
   "item.dnd_in_minecraft.adamantite_pistol": "Adamantite Pistol",
-
+  "item.dnd_in_minecraft.adamantite_lance": "Adamantite Lance",
+  "item.dnd_in_minecraft.adamantite_longsword": "Adamantite Longsword",
 
   "block.dnd_in_minecraft.silver_block": "Block of Silver",
   "block.dnd_in_minecraft.silver_ore": "Silver Ore",
 
   "itemgroup.currency": "Currencies",
-  "itemgroup.silver": "Silver"
+  "itemgroup.silver": "Silver",
+  "itemgroup.dnd_weapons": "DnD Weapons"
 
 
 }

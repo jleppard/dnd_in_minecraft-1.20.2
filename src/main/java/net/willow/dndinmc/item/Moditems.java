@@ -16,12 +16,18 @@ public class Moditems {
     public static final Item SILVER_NUGGET = registerItem("silver_nugget",   new Item(new  FabricItemSettings()));
     public static final Item COPPER_NUGGET = registerItem("copper_nugget",   new Item( new  FabricItemSettings()));
     public static final Item SILVER_INGOT = registerItem("silver_ingot",   new Item(new  FabricItemSettings()));
+    public static final Item ADAMANTITE_INGOT = registerItem("adamantite_ingot",   new Item(new  FabricItemSettings()));
+    public static final Item ADAMANTITE_NUGGET = registerItem("adamantite_nugget",   new Item(new  FabricItemSettings()));
+    public static final Item DIAMOND_SHARD = registerItem("diamond_shard",   new Item(new  FabricItemSettings()));
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
 
 
         entries.add(SILVER_NUGGET);
         entries.add(COPPER_NUGGET);
         entries.add(SILVER_INGOT);
+        entries.add(ADAMANTITE_INGOT);
+        entries.add(ADAMANTITE_NUGGET);
+        entries.add(DIAMOND_SHARD);
     }
     public static void addItemsToCombatTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(SILVER_SWORD);
@@ -47,6 +53,7 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
 
 
     public static final Item WOODEN_BATTLEAXE = registerItem("wooden_battleaxe",   new AxeItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
+    public static final Item WOODEN_WARHAMMER = registerItem("wooden_warhammer",   new AxeItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
     public static final Item WOODEN_FLAIL = registerItem("wooden_flail",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
     public static final Item WOODEN_GLAIVE = registerItem("wooden_glaive",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
     public static final Item WOODEN_GREATAXE = registerItem("wooden_greataxe",   new AxeItem(ToolMaterials.WOOD,5,-3.2F, new  FabricItemSettings()));
@@ -96,6 +103,7 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
 
 
     public static final Item STONE_BATTLEAXE = registerItem("stone_battleaxe",   new SwordItem(ToolMaterials.STONE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item STONE_WARHAMMER = registerItem("stone_warhammer",   new SwordItem(ToolMaterials.STONE,3,-2.4F, new  FabricItemSettings()));
     public static final Item STONE_FLAIL = registerItem("stone_flail",   new SwordItem(ToolMaterials.STONE,3,-2.4F, new  FabricItemSettings()));
     public static final Item STONE_GLAIVE = registerItem("stone_glaive",   new SwordItem(ToolMaterials.STONE,4,-3.2F, new  FabricItemSettings()));
     public static final Item STONE_GREATAXE = registerItem("stone_greataxe",   new SwordItem(ToolMaterials.STONE,5,-3.2F, new  FabricItemSettings()));
@@ -148,6 +156,7 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
 
 
     public static final Item IRON_BATTLEAXE = registerItem("iron_battleaxe",   new SwordItem(ToolMaterials.IRON,3,-2.4F, new  FabricItemSettings()));
+    public static final Item IRON_WARHAMMER = registerItem("iron_warhammer",   new SwordItem(ToolMaterials.IRON,3,-2.4F, new  FabricItemSettings()));
     public static final Item IRON_FLAIL = registerItem("iron_flail",   new SwordItem(ToolMaterials.IRON,3,-2.4F, new  FabricItemSettings()));
     public static final Item IRON_GLAIVE = registerItem("iron_glaive",   new SwordItem(ToolMaterials.IRON,4,-3.2F, new  FabricItemSettings()));
     public static final Item IRON_GREATAXE = registerItem("iron_greataxe",   new SwordItem(ToolMaterials.IRON,5,-3.2F, new  FabricItemSettings()));
@@ -183,36 +192,37 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
     public static final Item IRON_MUSKET = registerItem("iron_musket",   new SwordItem(ToolMaterials.IRON,1,1, new  FabricItemSettings()));
     public static final Item IRON_PISTOL = registerItem("iron_pistol",   new SwordItem(ToolMaterials.IRON,1,1, new  FabricItemSettings()));
     
-    public static final Item DIAMOND_CLUB = registerItem("diamond_club",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
-    public static final Item DIAMOND_DAGGER = registerItem("diamond_dagger",   new SwordItem(ToolMaterials.WOOD,1,-0.8F, new  FabricItemSettings()));
-    public static final Item DIAMOND_GREATCLUB = registerItem("diamond_greatclub",   new SwordItem(ToolMaterials.WOOD,3,-1.6F, new  FabricItemSettings()));
-    public static final Item DIAMOND_HANDAXE = registerItem("diamond_handaxe",   new SwordItem(ToolMaterials.WOOD,2,-1.6F, new  FabricItemSettings()));
-    public static final Item DIAMOND_JAVELIN = registerItem("diamond_javelin",   new SwordItem(ToolMaterials.WOOD,2,-2.4F, new  FabricItemSettings()));
-    public static final Item DIAMOND_LIGHT_HAMMER = registerItem("diamond_light_hammer",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
-    public static final Item DIAMOND_MACE = registerItem("diamond_mace",   new SwordItem(ToolMaterials.WOOD,2,-2.4F, new  FabricItemSettings()));
-    public static final Item DIAMOND_QUARTERSTAFF = registerItem("diamond_quarterstaff",   new SwordItem(ToolMaterials.WOOD,2,-2.4F, new  FabricItemSettings()));
-    public static final Item DIAMOND_SICKLE = registerItem("diamond_sickle",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
-    public static final Item DIAMOND_SPEAR = registerItem("diamond_spear",   new SwordItem(ToolMaterials.WOOD,2,-2.4F, new  FabricItemSettings()));
+    public static final Item DIAMOND_CLUB = registerItem("diamond_club",   new SwordItem(ToolMaterials.DIAMOND,1,-1.6F, new  FabricItemSettings()));
+    public static final Item DIAMOND_DAGGER = registerItem("diamond_dagger",   new SwordItem(ToolMaterials.DIAMOND,1,-0.8F, new  FabricItemSettings()));
+    public static final Item DIAMOND_GREATCLUB = registerItem("diamond_greatclub",   new SwordItem(ToolMaterials.DIAMOND,3,-1.6F, new  FabricItemSettings()));
+    public static final Item DIAMOND_HANDAXE = registerItem("diamond_handaxe",   new SwordItem(ToolMaterials.DIAMOND,2,-1.6F, new  FabricItemSettings()));
+    public static final Item DIAMOND_JAVELIN = registerItem("diamond_javelin",   new SwordItem(ToolMaterials.DIAMOND,2,-2.4F, new  FabricItemSettings()));
+    public static final Item DIAMOND_LIGHT_HAMMER = registerItem("diamond_light_hammer",   new SwordItem(ToolMaterials.DIAMOND,1,-1.6F, new  FabricItemSettings()));
+    public static final Item DIAMOND_MACE = registerItem("diamond_mace",   new SwordItem(ToolMaterials.DIAMOND,2,-2.4F, new  FabricItemSettings()));
+    public static final Item DIAMOND_QUARTERSTAFF = registerItem("diamond_quarterstaff",   new SwordItem(ToolMaterials.DIAMOND,2,-2.4F, new  FabricItemSettings()));
+    public static final Item DIAMOND_SICKLE = registerItem("diamond_sickle",   new SwordItem(ToolMaterials.DIAMOND,1,-1.6F, new  FabricItemSettings()));
+    public static final Item DIAMOND_SPEAR = registerItem("diamond_spear",   new SwordItem(ToolMaterials.DIAMOND,2,-2.4F, new  FabricItemSettings()));
 
 
-    public static final Item DIAMOND_BATTLEAXE = registerItem("diamond_battleaxe",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item DIAMOND_FLAIL = registerItem("diamond_flail",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item DIAMOND_GLAIVE = registerItem("diamond_glaive",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
-    public static final Item DIAMOND_GREATAXE = registerItem("diamond_greataxe",   new SwordItem(ToolMaterials.WOOD,5,-3.2F, new  FabricItemSettings()));
-    public static final Item DIAMOND_GREATSWORD = registerItem("diamond_greatsword",   new SwordItem(ToolMaterials.WOOD,5,-3.2F, new  FabricItemSettings()));
-    public static final Item DIAMOND_HALBERD = registerItem("diamond_halberd",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
-    public static final Item DIAMOND_LANCE = registerItem("diamond_lance",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
-    public static final Item DIAMOND_LONGSWORD = registerItem("diamond_longsword",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item DIAMOND_MAUL = registerItem("diamond_maul",   new SwordItem(ToolMaterials.WOOD,5,-3.2F, new  FabricItemSettings()));
-    public static final Item DIAMOND_MORNINGSTAR = registerItem("diamond_morningstar",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item DIAMOND_PIKE = registerItem("diamond_pike",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
-    public static final Item DIAMOND_RAPIER = registerItem("diamond_rapier",   new SwordItem(ToolMaterials.WOOD,3,-1.6F, new  FabricItemSettings()));
-    public static final Item DIAMOND_SCIMITAR = registerItem("diamond_scimitar",   new SwordItem(ToolMaterials.WOOD,2,-0.8F, new  FabricItemSettings()));
-    public static final Item DIAMOND_SHORTSWORD = registerItem("diamond_shortsword",   new SwordItem(ToolMaterials.WOOD,2,-0.8F, new  FabricItemSettings()));
-    public static final Item DIAMOND_TRIDENT = registerItem("diamond_trident",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item DIAMOND_WAR_PICK = registerItem("diamond_war_pick",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item DIAMOND_WHIP = registerItem("diamond_whip",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
-
+    public static final Item DIAMOND_BATTLEAXE = registerItem("diamond_battleaxe",   new SwordItem(ToolMaterials.DIAMOND,3,-2.4F, new  FabricItemSettings()));
+    public static final Item DIAMOND_WARHAMMER = registerItem("diamond_warhammer",   new SwordItem(ToolMaterials.DIAMOND,3,-2.4F, new  FabricItemSettings()));
+    public static final Item DIAMOND_FLAIL = registerItem("diamond_flail",   new SwordItem(ToolMaterials.DIAMOND,3,-2.4F, new  FabricItemSettings()));
+    public static final Item DIAMOND_GLAIVE = registerItem("diamond_glaive",   new SwordItem(ToolMaterials.DIAMOND,4,-3.2F, new  FabricItemSettings()));
+    public static final Item DIAMOND_GREATAXE = registerItem("diamond_greataxe",   new SwordItem(ToolMaterials.DIAMOND,5,-3.2F, new  FabricItemSettings()));
+    public static final Item DIAMOND_GREATSWORD = registerItem("diamond_greatsword",   new SwordItem(ToolMaterials.DIAMOND,5,-3.2F, new  FabricItemSettings()));
+    public static final Item DIAMOND_HALBERD = registerItem("diamond_halberd",   new SwordItem(ToolMaterials.DIAMOND,4,-3.2F, new  FabricItemSettings()));
+    public static final Item DIAMOND_LANCE = registerItem("diamond_lance",   new SwordItem(ToolMaterials.DIAMOND,4,-3.2F, new  FabricItemSettings()));
+    public static final Item DIAMOND_LONGSWORD = registerItem("diamond_longsword",   new SwordItem(ToolMaterials.DIAMOND,3,-2.4F, new  FabricItemSettings()));
+    public static final Item DIAMOND_MAUL = registerItem("diamond_maul",   new SwordItem(ToolMaterials.DIAMOND,5,-3.2F, new  FabricItemSettings()));
+    public static final Item DIAMOND_MORNINGSTAR = registerItem("diamond_morningstar",   new SwordItem(ToolMaterials.DIAMOND,3,-2.4F, new  FabricItemSettings()));
+    public static final Item DIAMOND_PIKE = registerItem("diamond_pike",   new SwordItem(ToolMaterials.DIAMOND,4,-3.2F, new  FabricItemSettings()));
+    public static final Item DIAMOND_RAPIER = registerItem("diamond_rapier",   new SwordItem(ToolMaterials.DIAMOND,3,-1.6F, new  FabricItemSettings()));
+    public static final Item DIAMOND_SCIMITAR = registerItem("diamond_scimitar",   new SwordItem(ToolMaterials.DIAMOND,2,-0.8F, new  FabricItemSettings()));
+    public static final Item DIAMOND_SHORTSWORD = registerItem("diamond_shortsword",   new SwordItem(ToolMaterials.DIAMOND,2,-0.8F, new  FabricItemSettings()));
+    public static final Item DIAMOND_TRIDENT = registerItem("diamond_trident",   new SwordItem(ToolMaterials.DIAMOND,3,-2.4F, new  FabricItemSettings()));
+    public static final Item DIAMOND_WAR_PICK = registerItem("diamond_war_pick",   new SwordItem(ToolMaterials.DIAMOND,3,-2.4F, new  FabricItemSettings()));
+    public static final Item DIAMOND_WHIP = registerItem("diamond_whip",   new SwordItem(ToolMaterials.DIAMOND,1,-1.6F, new  FabricItemSettings()));
+    public static final Item DIAMOND_DOUBLE_BLADED_SCIMITAR = registerItem("diamond_double_bladed_scimitar",   new SwordItem(ToolMaterials.DIAMOND,2,-1.6F, new  FabricItemSettings()));
 
     public static final Item DIAMOND_DART = registerItem("diamond_dart",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
     public static final Item DIAMOND_LIGHT_CROSSBOW = registerItem("diamond_light_crossbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
@@ -243,6 +253,7 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
 
 
     public static final Item NETHERITE_BATTLEAXE = registerItem("netherite_battleaxe",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
+    public static final Item NETHERITE_WARHAMMER = registerItem("netherite_warhammer",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
     public static final Item NETHERITE_FLAIL = registerItem("netherite_flail",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
     public static final Item NETHERITE_GLAIVE = registerItem("netherite_glaive",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
     public static final Item NETHERITE_GREATAXE = registerItem("netherite_greataxe",   new SwordItem(ToolMaterials.WOOD,5,-3.2F, new  FabricItemSettings()));
@@ -276,19 +287,20 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
 
     public static final Item ADAMANTITE_CLUB = registerItem("adamantite_club",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
     public static final Item ADAMANTITE_DAGGER = registerItem("adamantite_dagger",   new SwordItem(ToolMaterials.WOOD,1,-0.8F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_GREATCLUB = registerItem("adamantite_greatclub",   new SwordItem(ToolMaterials.WOOD,3,-1.6F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_HANDAXE = registerItem("adamantite_handaxe",   new SwordItem(ToolMaterials.WOOD,2,-1.6F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_JAVELIN = registerItem("adamantite_javelin",   new SwordItem(ToolMaterials.WOOD,2,-2.4F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_LIGHT_HAMMER = registerItem("adamantite_light_hammer",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_MACE = registerItem("adamantite_mace",   new SwordItem(ToolMaterials.WOOD,2,-2.4F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_QUARTERSTAFF = registerItem("adamantite_quarterstaff",   new SwordItem(ToolMaterials.WOOD,2,-2.4F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_SICKLE = registerItem("adamantite_sickle",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_SPEAR = registerItem("adamantite_spear",   new SwordItem(ToolMaterials.WOOD,2,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_GREATCLUB = registerItem("adamantite_greatclub",   new SwordItem(ToolMaterials.DIAMOND,3,-1.6F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_HANDAXE = registerItem("adamantite_handaxe",   new SwordItem(ToolMaterials.DIAMOND,2,-1.6F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_JAVELIN = registerItem("adamantite_javelin",   new SwordItem(ToolMaterials.DIAMOND,2,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_LIGHT_HAMMER = registerItem("adamantite_light_hammer",   new SwordItem(ToolMaterials.DIAMOND,1,-1.6F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_MACE = registerItem("adamantite_mace",   new SwordItem(ToolMaterials.DIAMOND,2,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_QUARTERSTAFF = registerItem("adamantite_quarterstaff",   new SwordItem(ToolMaterials.DIAMOND,2,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_SICKLE = registerItem("adamantite_sickle",   new SwordItem(ToolMaterials.DIAMOND,1,-1.6F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_SPEAR = registerItem("adamantite_spear",   new SwordItem(ToolMaterials.DIAMOND,2,-2.4F, new  FabricItemSettings()));
 
 
 
 
     public static final Item ADAMANTITE_BATTLEAXE = registerItem("adamantite_battleaxe",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_WARHAMMER = registerItem("adamantite_warhammer",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
     public static final Item ADAMANTITE_FLAIL = registerItem("adamantite_flail",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
     public static final Item ADAMANTITE_GLAIVE = registerItem("adamantite_glaive",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
     public static final Item ADAMANTITE_GREATAXE = registerItem("adamantite_greataxe",   new SwordItem(ToolMaterials.WOOD,5,-3.2F, new  FabricItemSettings()));
@@ -305,6 +317,7 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
     public static final Item ADAMANTITE_TRIDENT = registerItem("adamantite_trident",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
     public static final Item ADAMANTITE_WAR_PICK = registerItem("adamantite_war_pick",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
     public static final Item ADAMANTITE_WHIP = registerItem("adamantite_whip",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_DOUBLE_BLADED_SCIMITAR = registerItem("adamantite_double_bladed_scimitar",   new SwordItem(ToolMaterials.WOOD,2,-1.6F, new  FabricItemSettings()));
 
 
 

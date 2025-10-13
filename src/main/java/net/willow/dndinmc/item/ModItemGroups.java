@@ -43,7 +43,7 @@ entries.add(ModBlocks.SILVER_ORE);
     public static final ItemGroup DND_WEAPONS = Registry.register(Registries.ITEM_GROUP,
             new Identifier(DnD_in_Minecraft.MOD_ID, "dnd_weapon"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.dnd_weapon"))
-                    .icon(() -> new ItemStack(Moditems.SILVER_INGOT)) .entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(Moditems.DIAMOND_GREATSWORD)) .entries((displayContext, entries) -> {
                         entries.add(Moditems.WOODEN_CLUB);
                         entries.add(Moditems.WOODEN_DAGGER);
                         entries.add(Moditems.WOODEN_GREATCLUB);
@@ -58,6 +58,7 @@ entries.add(ModBlocks.SILVER_ORE);
                         entries.add(Moditems.WOODEN_FLAIL);
                         entries.add(Moditems.WOODEN_GLAIVE);
                         entries.add(Moditems.WOODEN_GREATAXE);
+                        entries.add(Moditems.WOODEN_GREATSWORD);
                         entries.add(Moditems.WOODEN_HALBERD);
                         entries.add(Moditems.WOODEN_LANCE);
                         entries.add(Moditems.WOODEN_LONGSWORD);
@@ -71,6 +72,7 @@ entries.add(ModBlocks.SILVER_ORE);
                         entries.add(Moditems.WOODEN_WHIP);
                         entries.add(Moditems.WOODEN_WAR_PICK);
                         entries.add(Moditems.WOODEN_WARHAMMER);
+                        entries.add(Moditems.WOODEN_DOUBLE_BLADED_SCIMITAR);
                         entries.add(Moditems.STONE_CLUB);
                         entries.add(Moditems.STONE_DAGGER);
                         entries.add(Moditems.STONE_GREATCLUB);
@@ -85,6 +87,7 @@ entries.add(ModBlocks.SILVER_ORE);
                         entries.add(Moditems.STONE_FLAIL);
                         entries.add(Moditems.STONE_GLAIVE);
                         entries.add(Moditems.STONE_GREATAXE);
+                        entries.add(Moditems.STONE_GREATSWORD);
                         entries.add(Moditems.STONE_HALBERD);
                         entries.add(Moditems.STONE_LANCE);
                         entries.add(Moditems.STONE_LONGSWORD);
@@ -98,6 +101,7 @@ entries.add(ModBlocks.SILVER_ORE);
                         entries.add(Moditems.STONE_WHIP);
                         entries.add(Moditems.STONE_WAR_PICK);
                         entries.add(Moditems.STONE_WARHAMMER);
+                        entries.add(Moditems.STONE_DOUBLE_BLADED_SCIMITAR);
 
 
                         entries.add(Moditems.IRON_CLUB);
@@ -114,6 +118,7 @@ entries.add(ModBlocks.SILVER_ORE);
                         entries.add(Moditems.IRON_FLAIL);
                         entries.add(Moditems.IRON_GLAIVE);
                         entries.add(Moditems.IRON_GREATAXE);
+                        entries.add(Moditems.IRON_GREATSWORD);
                         entries.add(Moditems.IRON_HALBERD);
                         entries.add(Moditems.IRON_LANCE);
                         entries.add(Moditems.IRON_LONGSWORD);
@@ -127,6 +132,7 @@ entries.add(ModBlocks.SILVER_ORE);
                         entries.add(Moditems.IRON_WHIP);
                         entries.add(Moditems.IRON_WAR_PICK);
                         entries.add(Moditems.IRON_WARHAMMER);
+                        entries.add(Moditems.IRON_DOUBLE_BLADED_SCIMITAR);
                         entries.add(Moditems.DIAMOND_CLUB);
                         entries.add(Moditems.DIAMOND_DAGGER);
                         entries.add(Moditems.DIAMOND_GREATCLUB);
@@ -141,6 +147,7 @@ entries.add(ModBlocks.SILVER_ORE);
                         entries.add(Moditems.DIAMOND_FLAIL);
                         entries.add(Moditems.DIAMOND_GLAIVE);
                         entries.add(Moditems.DIAMOND_GREATAXE);
+                        entries.add(Moditems.DIAMOND_GREATSWORD);
                         entries.add(Moditems.DIAMOND_HALBERD);
                         entries.add(Moditems.DIAMOND_LANCE);
                         entries.add(Moditems.DIAMOND_LONGSWORD);
@@ -154,6 +161,7 @@ entries.add(ModBlocks.SILVER_ORE);
                         entries.add(Moditems.DIAMOND_WHIP);
                         entries.add(Moditems.DIAMOND_WAR_PICK);
                         entries.add(Moditems.DIAMOND_WARHAMMER);
+                        entries.add(Moditems.DIAMOND_DOUBLE_BLADED_SCIMITAR);
                         entries.add(Moditems.NETHERITE_CLUB);
                         entries.add(Moditems.NETHERITE_DAGGER);
                         entries.add(Moditems.NETHERITE_GREATCLUB);
@@ -168,6 +176,7 @@ entries.add(ModBlocks.SILVER_ORE);
                         entries.add(Moditems.NETHERITE_FLAIL);
                         entries.add(Moditems.NETHERITE_GLAIVE);
                         entries.add(Moditems.NETHERITE_GREATAXE);
+                        entries.add(Moditems.NETHERITE_GREATSWORD);
                         entries.add(Moditems.NETHERITE_HALBERD);
                         entries.add(Moditems.NETHERITE_LANCE);
                         entries.add(Moditems.NETHERITE_LONGSWORD);
@@ -181,6 +190,7 @@ entries.add(ModBlocks.SILVER_ORE);
                         entries.add(Moditems.NETHERITE_WHIP);
                         entries.add(Moditems.NETHERITE_WAR_PICK);
                         entries.add(Moditems.NETHERITE_WARHAMMER);
+                        entries.add(Moditems.NETHERITE_DOUBLE_BLADED_SCIMITAR);
                         entries.add(Moditems.ADAMANTITE_CLUB);
                         entries.add(Moditems.ADAMANTITE_DAGGER);
                         entries.add(Moditems.ADAMANTITE_GREATCLUB);
@@ -195,6 +205,7 @@ entries.add(ModBlocks.SILVER_ORE);
                         entries.add(Moditems.ADAMANTITE_FLAIL);
                         entries.add(Moditems.ADAMANTITE_GLAIVE);
                         entries.add(Moditems.ADAMANTITE_GREATAXE);
+                        entries.add(Moditems.ADAMANTITE_GREATSWORD);
                         entries.add(Moditems.ADAMANTITE_HALBERD);
                         entries.add(Moditems.ADAMANTITE_LANCE);
                         entries.add(Moditems.ADAMANTITE_LONGSWORD);
@@ -208,6 +219,7 @@ entries.add(ModBlocks.SILVER_ORE);
                         entries.add(Moditems.ADAMANTITE_WHIP);
                         entries.add(Moditems.ADAMANTITE_WAR_PICK);
                         entries.add(Moditems.ADAMANTITE_WARHAMMER);
+                        entries.add(Moditems.ADAMANTITE_DOUBLE_BLADED_SCIMITAR);
 
 
 

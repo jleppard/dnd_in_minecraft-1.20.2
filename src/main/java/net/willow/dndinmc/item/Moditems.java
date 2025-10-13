@@ -19,6 +19,7 @@ public class Moditems {
     public static final Item ADAMANTITE_INGOT = registerItem("adamantite_ingot",   new Item(new  FabricItemSettings()));
     public static final Item ADAMANTITE_NUGGET = registerItem("adamantite_nugget",   new Item(new  FabricItemSettings()));
     public static final Item DIAMOND_SHARD = registerItem("diamond_shard",   new Item(new  FabricItemSettings()));
+    public static final Item ADAMANTITE_UPGRADE_SMITHING_TEMPLATE = registerItem("adamantite_upgrade_smithing_template",   new Item(new  FabricItemSettings()));
     private static void addItemsToIngredientTabItemGroup(FabricItemGroupEntries entries) {
 
 
@@ -28,6 +29,7 @@ public class Moditems {
         entries.add(ADAMANTITE_INGOT);
         entries.add(ADAMANTITE_NUGGET);
         entries.add(DIAMOND_SHARD);
+        entries.add(ADAMANTITE_UPGRADE_SMITHING_TEMPLATE);
     }
     public static void addItemsToCombatTabItemGroup(FabricItemGroupEntries entries) {
         entries.add(SILVER_SWORD);
@@ -240,36 +242,37 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
 
 
 
-    public static final Item NETHERITE_CLUB = registerItem("netherite_club",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
-    public static final Item NETHERITE_DAGGER = registerItem("netherite_dagger",   new SwordItem(ToolMaterials.WOOD,1,-0.8F, new  FabricItemSettings()));
-    public static final Item NETHERITE_GREATCLUB = registerItem("netherite_greatclub",   new SwordItem(ToolMaterials.WOOD,3,-1.6F, new  FabricItemSettings()));
-    public static final Item NETHERITE_HANDAXE = registerItem("netherite_handaxe",   new SwordItem(ToolMaterials.WOOD,2,-1.6F, new  FabricItemSettings()));
-    public static final Item NETHERITE_JAVELIN = registerItem("netherite_javelin",   new SwordItem(ToolMaterials.WOOD,2,-2.4F, new  FabricItemSettings()));
-    public static final Item NETHERITE_LIGHT_HAMMER = registerItem("netherite_light_hammer",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
-    public static final Item NETHERITE_MACE = registerItem("netherite_mace",   new SwordItem(ToolMaterials.WOOD,2,-2.4F, new  FabricItemSettings()));
-    public static final Item NETHERITE_QUARTERSTAFF = registerItem("netherite_quarterstaff",   new SwordItem(ToolMaterials.WOOD,2,-2.4F, new  FabricItemSettings()));
-    public static final Item NETHERITE_SICKLE = registerItem("netherite_sickle",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
-    public static final Item NETHERITE_SPEAR = registerItem("netherite_spear",   new SwordItem(ToolMaterials.WOOD,2,-2.4F, new  FabricItemSettings()));
+    public static final Item NETHERITE_CLUB = registerItem("netherite_club",   new SwordItem(ToolMaterials.NETHERITE,1,-1.6F, new  FabricItemSettings()));
+    public static final Item NETHERITE_DAGGER = registerItem("netherite_dagger",   new SwordItem(ToolMaterials.NETHERITE,1,-0.8F, new  FabricItemSettings()));
+    public static final Item NETHERITE_GREATCLUB = registerItem("netherite_greatclub",   new SwordItem(ToolMaterials.NETHERITE,3,-1.6F, new  FabricItemSettings()));
+    public static final Item NETHERITE_HANDAXE = registerItem("netherite_handaxe",   new SwordItem(ToolMaterials.NETHERITE,2,-1.6F, new  FabricItemSettings()));
+    public static final Item NETHERITE_JAVELIN = registerItem("netherite_javelin",   new SwordItem(ToolMaterials.NETHERITE,2,-2.4F, new  FabricItemSettings()));
+    public static final Item NETHERITE_LIGHT_HAMMER = registerItem("netherite_light_hammer",   new SwordItem(ToolMaterials.NETHERITE,1,-1.6F, new  FabricItemSettings()));
+    public static final Item NETHERITE_MACE = registerItem("netherite_mace",   new SwordItem(ToolMaterials.NETHERITE,2,-2.4F, new  FabricItemSettings()));
+    public static final Item NETHERITE_QUARTERSTAFF = registerItem("netherite_quarterstaff",   new SwordItem(ToolMaterials.NETHERITE,2,-2.4F, new  FabricItemSettings()));
+    public static final Item NETHERITE_SICKLE = registerItem("netherite_sickle",   new SwordItem(ToolMaterials.NETHERITE,1,-1.6F, new  FabricItemSettings()));
+    public static final Item NETHERITE_SPEAR = registerItem("netherite_spear",   new SwordItem(ToolMaterials.NETHERITE,2,-2.4F, new  FabricItemSettings()));
 
 
-    public static final Item NETHERITE_BATTLEAXE = registerItem("netherite_battleaxe",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item NETHERITE_WARHAMMER = registerItem("netherite_warhammer",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item NETHERITE_FLAIL = registerItem("netherite_flail",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item NETHERITE_GLAIVE = registerItem("netherite_glaive",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
-    public static final Item NETHERITE_GREATAXE = registerItem("netherite_greataxe",   new SwordItem(ToolMaterials.WOOD,5,-3.2F, new  FabricItemSettings()));
-    public static final Item NETHERITE_GREATSWORD = registerItem("netherite_greatsword",   new SwordItem(ToolMaterials.WOOD,5,-3.2F, new  FabricItemSettings()));
-    public static final Item NETHERITE_HALBERD = registerItem("netherite_halberd",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
-    public static final Item NETHERITE_LANCE = registerItem("netherite_lance",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
-    public static final Item NETHERITE_LONGSWORD = registerItem("netherite_longsword",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item NETHERITE_MAUL = registerItem("netherite_maul",   new SwordItem(ToolMaterials.WOOD,5,-3.2F, new  FabricItemSettings()));
-    public static final Item NETHERITE_MORNINGSTAR = registerItem("netherite_morningstar",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item NETHERITE_PIKE = registerItem("netherite_pike",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
-    public static final Item NETHERITE_RAPIER = registerItem("netherite_rapier",   new SwordItem(ToolMaterials.WOOD,3,-1.6F, new  FabricItemSettings()));
-    public static final Item NETHERITE_SCIMITAR = registerItem("netherite_scimitar",   new SwordItem(ToolMaterials.WOOD,2,-0.8F, new  FabricItemSettings()));
-    public static final Item NETHERITE_SHORTSWORD = registerItem("netherite_shortsword",   new SwordItem(ToolMaterials.WOOD,2,-0.8F, new  FabricItemSettings()));
-    public static final Item NETHERITE_TRIDENT = registerItem("netherite_trident",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item NETHERITE_WAR_PICK = registerItem("netherite_war_pick",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item NETHERITE_WHIP = registerItem("netherite_whip",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
+    public static final Item NETHERITE_BATTLEAXE = registerItem("netherite_battleaxe",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item NETHERITE_WARHAMMER = registerItem("netherite_warhammer",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item NETHERITE_FLAIL = registerItem("netherite_flail",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item NETHERITE_GLAIVE = registerItem("netherite_glaive",   new SwordItem(ToolMaterials.NETHERITE,4,-3.2F, new  FabricItemSettings()));
+    public static final Item NETHERITE_GREATAXE = registerItem("netherite_greataxe",   new SwordItem(ToolMaterials.NETHERITE,5,-3.2F, new  FabricItemSettings()));
+    public static final Item NETHERITE_GREATSWORD = registerItem("netherite_greatsword",   new SwordItem(ToolMaterials.NETHERITE,5,-3.2F, new  FabricItemSettings()));
+    public static final Item NETHERITE_HALBERD = registerItem("netherite_halberd",   new SwordItem(ToolMaterials.NETHERITE,4,-3.2F, new  FabricItemSettings()));
+    public static final Item NETHERITE_LANCE = registerItem("netherite_lance",   new SwordItem(ToolMaterials.NETHERITE,4,-3.2F, new  FabricItemSettings()));
+    public static final Item NETHERITE_LONGSWORD = registerItem("netherite_longsword",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item NETHERITE_MAUL = registerItem("netherite_maul",   new SwordItem(ToolMaterials.NETHERITE,5,-3.2F, new  FabricItemSettings()));
+    public static final Item NETHERITE_MORNINGSTAR = registerItem("netherite_morningstar",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item NETHERITE_PIKE = registerItem("netherite_pike",   new SwordItem(ToolMaterials.NETHERITE,4,-3.2F, new  FabricItemSettings()));
+    public static final Item NETHERITE_RAPIER = registerItem("netherite_rapier",   new SwordItem(ToolMaterials.NETHERITE,3,-1.6F, new  FabricItemSettings()));
+    public static final Item NETHERITE_SCIMITAR = registerItem("netherite_scimitar",   new SwordItem(ToolMaterials.NETHERITE,2,-0.8F, new  FabricItemSettings()));
+    public static final Item NETHERITE_SHORTSWORD = registerItem("netherite_shortsword",   new SwordItem(ToolMaterials.NETHERITE,2,-0.8F, new  FabricItemSettings()));
+    public static final Item NETHERITE_TRIDENT = registerItem("netherite_trident",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item NETHERITE_WAR_PICK = registerItem("netherite_war_pick",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item NETHERITE_WHIP = registerItem("netherite_whip",   new SwordItem(ToolMaterials.NETHERITE,1,-1.6F, new  FabricItemSettings()));
+    public static final Item NETHERITE_DOUBLE_BLADED_SCIMITAR = registerItem("netherite_double_bladed_scimitar",   new SwordItem(ToolMaterials.NETHERITE,2,-1.6F, new  FabricItemSettings()));
 
 
     public static final Item NETHERITE_DART = registerItem("netherite_dart",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
@@ -285,44 +288,44 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
     public static final Item NETHERITE_MUSKET = registerItem("netherite_musket",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
     public static final Item NETHERITE_PISTOL = registerItem("netherite_pistol",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
 
-    public static final Item ADAMANTITE_CLUB = registerItem("adamantite_club",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_DAGGER = registerItem("adamantite_dagger",   new SwordItem(ToolMaterials.WOOD,1,-0.8F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_GREATCLUB = registerItem("adamantite_greatclub",   new SwordItem(ToolMaterials.DIAMOND,3,-1.6F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_HANDAXE = registerItem("adamantite_handaxe",   new SwordItem(ToolMaterials.DIAMOND,2,-1.6F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_JAVELIN = registerItem("adamantite_javelin",   new SwordItem(ToolMaterials.DIAMOND,2,-2.4F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_LIGHT_HAMMER = registerItem("adamantite_light_hammer",   new SwordItem(ToolMaterials.DIAMOND,1,-1.6F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_MACE = registerItem("adamantite_mace",   new SwordItem(ToolMaterials.DIAMOND,2,-2.4F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_QUARTERSTAFF = registerItem("adamantite_quarterstaff",   new SwordItem(ToolMaterials.DIAMOND,2,-2.4F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_SICKLE = registerItem("adamantite_sickle",   new SwordItem(ToolMaterials.DIAMOND,1,-1.6F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_SPEAR = registerItem("adamantite_spear",   new SwordItem(ToolMaterials.DIAMOND,2,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_CLUB = registerItem("adamantite_club",   new SwordItem(ToolMaterials.NETHERITE,1,-1.6F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_DAGGER = registerItem("adamantite_dagger",   new SwordItem(ToolMaterials.NETHERITE,1,-0.8F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_GREATCLUB = registerItem("adamantite_greatclub",   new SwordItem(ToolMaterials.NETHERITE,3,-1.6F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_HANDAXE = registerItem("adamantite_handaxe",   new SwordItem(ToolMaterials.NETHERITE,2,-1.6F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_JAVELIN = registerItem("adamantite_javelin",   new SwordItem(ToolMaterials.NETHERITE,2,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_LIGHT_HAMMER = registerItem("adamantite_light_hammer",   new SwordItem(ToolMaterials.NETHERITE,1,-1.6F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_MACE = registerItem("adamantite_mace",   new SwordItem(ToolMaterials.NETHERITE,2,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_QUARTERSTAFF = registerItem("adamantite_quarterstaff",   new SwordItem(ToolMaterials.NETHERITE,2,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_SICKLE = registerItem("adamantite_sickle",   new SwordItem(ToolMaterials.NETHERITE,1,-1.6F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_SPEAR = registerItem("adamantite_spear",   new SwordItem(ToolMaterials.NETHERITE,2,-2.4F, new  FabricItemSettings()));
 
 
 
 
-    public static final Item ADAMANTITE_BATTLEAXE = registerItem("adamantite_battleaxe",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_WARHAMMER = registerItem("adamantite_warhammer",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_FLAIL = registerItem("adamantite_flail",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_GLAIVE = registerItem("adamantite_glaive",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_GREATAXE = registerItem("adamantite_greataxe",   new SwordItem(ToolMaterials.WOOD,5,-3.2F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_GREATSWORD = registerItem("adamantite_greatsword",   new SwordItem(ToolMaterials.WOOD,5,-3.2F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_HALBERD = registerItem("adamantite_halberd",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_LANCE = registerItem("adamantite_lance",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_LONGSWORD = registerItem("adamantite_longsword",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_MAUL = registerItem("adamantite_maul",   new SwordItem(ToolMaterials.WOOD,5,-3.2F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_MORNINGSTAR = registerItem("adamantite_morningstar",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_PIKE = registerItem("adamantite_pike",   new SwordItem(ToolMaterials.WOOD,4,-3.2F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_RAPIER = registerItem("adamantite_rapier",   new SwordItem(ToolMaterials.WOOD,3,-1.6F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_SCIMITAR = registerItem("adamantite_scimitar",   new SwordItem(ToolMaterials.WOOD,2,-0.8F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_SHORTSWORD = registerItem("adamantite_shortsword",   new SwordItem(ToolMaterials.WOOD,2,-0.8F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_TRIDENT = registerItem("adamantite_trident",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_WAR_PICK = registerItem("adamantite_war_pick",   new SwordItem(ToolMaterials.WOOD,3,-2.4F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_WHIP = registerItem("adamantite_whip",   new SwordItem(ToolMaterials.WOOD,1,-1.6F, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_DOUBLE_BLADED_SCIMITAR = registerItem("adamantite_double_bladed_scimitar",   new SwordItem(ToolMaterials.WOOD,2,-1.6F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_BATTLEAXE = registerItem("adamantite_battleaxe",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_WARHAMMER = registerItem("adamantite_warhammer",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_FLAIL = registerItem("adamantite_flail",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_GLAIVE = registerItem("adamantite_glaive",   new SwordItem(ToolMaterials.NETHERITE,4,-3.2F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_GREATAXE = registerItem("adamantite_greataxe",   new SwordItem(ToolMaterials.NETHERITE,5,-3.2F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_GREATSWORD = registerItem("adamantite_greatsword",   new SwordItem(ToolMaterials.NETHERITE,5,-3.2F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_HALBERD = registerItem("adamantite_halberd",   new SwordItem(ToolMaterials.NETHERITE,4,-3.2F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_LANCE = registerItem("adamantite_lance",   new SwordItem(ToolMaterials.NETHERITE,4,-3.2F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_LONGSWORD = registerItem("adamantite_longsword",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_MAUL = registerItem("adamantite_maul",   new SwordItem(ToolMaterials.NETHERITE,5,-3.2F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_MORNINGSTAR = registerItem("adamantite_morningstar",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_PIKE = registerItem("adamantite_pike",   new SwordItem(ToolMaterials.NETHERITE,4,-3.2F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_RAPIER = registerItem("adamantite_rapier",   new SwordItem(ToolMaterials.NETHERITE,3,-1.6F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_SCIMITAR = registerItem("adamantite_scimitar",   new SwordItem(ToolMaterials.NETHERITE,2,-0.8F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_SHORTSWORD = registerItem("adamantite_shortsword",   new SwordItem(ToolMaterials.NETHERITE,2,-0.8F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_TRIDENT = registerItem("adamantite_trident",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_WAR_PICK = registerItem("adamantite_war_pick",   new SwordItem(ToolMaterials.NETHERITE,3,-2.4F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_WHIP = registerItem("adamantite_whip",   new SwordItem(ToolMaterials.NETHERITE,1,-1.6F, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_DOUBLE_BLADED_SCIMITAR = registerItem("adamantite_double_bladed_scimitar",   new SwordItem(ToolMaterials.NETHERITE,2,-1.6F, new  FabricItemSettings()));
 
 
 
 
-    public static final Item ADAMANTITE_DART = registerItem("adamantite_dart",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_DART = registerItem("adamantite_dart",   new SwordItem(ToolMaterials.NETHERITE,1,1, new  FabricItemSettings()));
     public static final Item ADAMANTITE_LIGHT_CROSSBOW = registerItem("adamantite_light_crossbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
     public static final Item ADAMANTITE_SHORTBOW = registerItem("adamantite_shortbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
     public static final Item ADAMANTITE_SLING = registerItem("adamantite_sling",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));

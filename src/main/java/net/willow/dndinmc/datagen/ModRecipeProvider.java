@@ -412,8 +412,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" !#")
                 .pattern(" ! ")
                 .input('#', ItemTags.STONE_TOOL_MATERIALS)
-
-
                 .input('!', Items.STICK)
                 .criterion(hasItem(ItemTags.STONE_TOOL_MATERIALS),conditionsFromTag(ItemTags.STONE_TOOL_MATERIALS))
                 .offerTo(exporter, new Identifier(getRecipeName(Moditems.STONE_BATTLEAXE)));
@@ -1104,146 +1102,413 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.DIAMOND),conditionsFromItem(Items.DIAMOND))
                 .offerTo(exporter, new Identifier(getRecipeName(Moditems.DIAMOND_DOUBLE_BLADED_SCIMITAR)));
 
-    SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-            Ingredient.ofItems(Moditems.DIAMOND_DAGGER),
-            Ingredient.ofItems(Items.NETHERITE_INGOT),
-            RecipeCategory.COMBAT,
-            Moditems.NETHERITE_DAGGER).offerTo(exporter, new Identifier("dndinmc", "netherite_dagger_smithing"));
-    SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-            Ingredient.ofItems(Moditems.DIAMOND_CLUB),
-            Ingredient.ofItems(Items.NETHERITE_INGOT),
-            RecipeCategory.COMBAT,
-            Moditems.NETHERITE_CLUB).offerTo(exporter, new Identifier("dndinmc", "netherite_club_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(Moditems.DIAMOND_DAGGER),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_DAGGER).criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_dagger_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(Moditems.DIAMOND_CLUB),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_CLUB).criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_club_smithing"));
+
 
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_GREATCLUB),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT, Moditems.NETHERITE_GREATCLUB).offerTo(exporter, new Identifier("dndinmc", "netherite_greatclub_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_GREATCLUB),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT, Moditems.NETHERITE_GREATCLUB)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_greatclub_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_HANDAXE),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_HANDAXE).offerTo(exporter, new Identifier("dndinmc", "netherite_handaxe_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_HANDAXE),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_HANDAXE)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_handaxe_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_JAVELIN),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_JAVELIN).offerTo(exporter, new Identifier("dndinmc", "netherite_javelin_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_JAVELIN),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_JAVELIN)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_javelin_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_LIGHT_HAMMER),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_LIGHT_HAMMER).offerTo(exporter, new Identifier("dndinmc", "netherite_light_hammer_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_LIGHT_HAMMER),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_LIGHT_HAMMER)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_light_hammer_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_MACE),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_MACE).offerTo(exporter, new Identifier("dndinmc", "netherite_mace_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_MACE),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_MACE)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_mace_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_QUARTERSTAFF),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_QUARTERSTAFF).offerTo(exporter, new Identifier("dndinmc", "netherite_quarterstaff_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_QUARTERSTAFF),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_QUARTERSTAFF)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_quarterstaff_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_SICKLE),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_SICKLE).offerTo(exporter, new Identifier("dndinmc", "netherite_sickle_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_SICKLE),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_SICKLE)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_sickle_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_SPEAR),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_SPEAR).offerTo(exporter, new Identifier("dndinmc", "netherite_spear_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_SPEAR),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_SPEAR)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_spear_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_BATTLEAXE),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_BATTLEAXE).offerTo(exporter, new Identifier("dndinmc", "netherite_battleaxe_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_BATTLEAXE),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_BATTLEAXE)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_battleaxe_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_FLAIL),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_FLAIL).offerTo(exporter, new Identifier("dndinmc", "netherite_flail_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_FLAIL),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_FLAIL)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_flail_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_GLAIVE),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_GLAIVE).offerTo(exporter, new Identifier("dndinmc", "netherite_glaive_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_GLAIVE),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_GLAIVE)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_glaive_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_GREATAXE),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_GREATAXE).offerTo(exporter, new Identifier("dndinmc", "netherite_greataxe_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_GREATAXE),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_GREATAXE)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_greataxe_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_GREATSWORD),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_GREATSWORD).offerTo(exporter, new Identifier("dndinmc", "netherite_greatsword_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_GREATSWORD),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_GREATSWORD)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_greatsword_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_HALBERD),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_HALBERD).offerTo(exporter, new Identifier("dndinmc", "netherite_halberd_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_HALBERD),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_HALBERD)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_halberd_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_LANCE),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_LANCE).offerTo(exporter, new Identifier("dndinmc", "netherite_lance_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_LANCE),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_LANCE)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_lance_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_LONGSWORD),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_LONGSWORD).offerTo(exporter, new Identifier("dndinmc", "netherite_longsword_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_LONGSWORD),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_LONGSWORD)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_longsword_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_MAUL),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_MAUL).offerTo(exporter, new Identifier("dndinmc", "netherite_maul_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_MAUL),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_MAUL)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_maul_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_MORNINGSTAR),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_MORNINGSTAR).offerTo(exporter, new Identifier("dndinmc", "netherite_morningstar_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_MORNINGSTAR),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_MORNINGSTAR)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_morningstar_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_PIKE),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_PIKE).offerTo(exporter, new Identifier("dndinmc", "netherite_pike_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_PIKE),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_PIKE)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_pike_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                 Ingredient.ofItems(Moditems.DIAMOND_RAPIER),
                 Ingredient.ofItems(Items.NETHERITE_INGOT),
                 RecipeCategory.COMBAT,
-                Moditems.NETHERITE_RAPIER).offerTo(exporter, new Identifier("dndinmc", "netherite_rapier_smithing"));
+                Moditems.NETHERITE_RAPIER)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_rapier_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_SCIMITAR),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_SCIMITAR).offerTo(exporter, new Identifier("dndinmc", "netherite_scimitar_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_SCIMITAR),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_SCIMITAR)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_scimitar_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_SHORTSWORD),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_SHORTSWORD).offerTo(exporter, new Identifier("dndinmc", "netherite_shortsword_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_SHORTSWORD),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_SHORTSWORD)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_shortsword_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                 Ingredient.ofItems(Moditems.DIAMOND_TRIDENT),
                 Ingredient.ofItems(Items.NETHERITE_INGOT),
                 RecipeCategory.COMBAT,
-                Moditems.NETHERITE_TRIDENT).offerTo(exporter, new Identifier("dndinmc", "netherite_trident_smithing"));
+                Moditems.NETHERITE_TRIDENT)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_trident_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
                 Ingredient.ofItems(Moditems.DIAMOND_WAR_PICK),
                 Ingredient.ofItems(Items.NETHERITE_INGOT),
                 RecipeCategory.COMBAT,
-                Moditems.NETHERITE_WAR_PICK).offerTo(exporter, new Identifier("dndinmc", "netherite_war_pick_smithing"));
+                Moditems.NETHERITE_WAR_PICK)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_war_pick_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_CLUB),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
-                RecipeCategory.COMBAT,
-                Moditems.NETHERITE_WARHAMMER).offerTo(exporter, new Identifier("dndinmc", "netherite_warhammer_smithing"));
+                        Ingredient.ofItems(Moditems.DIAMOND_CLUB),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_WARHAMMER)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_warhammer_smithing"));
         SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
-                Ingredient.ofItems(Moditems.DIAMOND_WHIP),
-                Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        Ingredient.ofItems(Moditems.DIAMOND_WHIP),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_WHIP)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_whip_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(Moditems.NETHERITE_DOUBLE_BLADED_SCIMITAR),
+                        Ingredient.ofItems(Items.NETHERITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.NETHERITE_DOUBLE_BLADED_SCIMITAR)
+                .criterion(hasItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "netherite_double_bladed_scimitar_smithing"));
+
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+            Ingredient.ofItems(Moditems.NETHERITE_DAGGER),
+            Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+            RecipeCategory.COMBAT,
+            Moditems.ADAMANTITE_DAGGER).criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+            .offerTo(exporter, new Identifier("dndinmc", "adamantite_dagger_smithing"));
+    SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+            Ingredient.ofItems(Moditems.NETHERITE_CLUB),
+            Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+            RecipeCategory.COMBAT,
+            Moditems.ADAMANTITE_CLUB).criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+            .offerTo(exporter, new Identifier("dndinmc", "adamantite_club_smithing"));
+
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_GREATCLUB),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT, Moditems.ADAMANTITE_GREATCLUB)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_greatclub_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_HANDAXE),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
                 RecipeCategory.COMBAT,
-                Moditems.NETHERITE_WHIP).offerTo(exporter, new Identifier("dndinmc", "netherite_whip_smithing"));
+                Moditems.ADAMANTITE_HANDAXE)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_handaxe_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_JAVELIN),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_JAVELIN)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_javelin_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_LIGHT_HAMMER),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_LIGHT_HAMMER)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_light_hammer_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_MACE),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_MACE)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_mace_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_QUARTERSTAFF),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_QUARTERSTAFF)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_quarterstaff_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_SICKLE),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_SICKLE)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_sickle_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_SPEAR),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_SPEAR)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_spear_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_BATTLEAXE),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_BATTLEAXE)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_battleaxe_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_FLAIL),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_FLAIL)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_flail_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_GLAIVE),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_GLAIVE)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_glaive_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_GREATAXE),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_GREATAXE)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_greataxe_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_GREATSWORD),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_GREATSWORD)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_greatsword_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_HALBERD),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_HALBERD)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_halberd_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_LANCE),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_LANCE)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_lance_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_LONGSWORD),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_LONGSWORD)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_longsword_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_MAUL),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_MAUL)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_maul_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_MORNINGSTAR),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_MORNINGSTAR)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_morningstar_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_PIKE),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_PIKE)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_pike_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_RAPIER),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_RAPIER)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_rapier_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_SCIMITAR),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_SCIMITAR)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_scimitar_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_SHORTSWORD),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_SHORTSWORD)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_shortsword_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_TRIDENT),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_TRIDENT)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_trident_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_WAR_PICK),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_WAR_PICK)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_war_pick_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_CLUB),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_WARHAMMER)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_warhammer_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                Ingredient.ofItems(Moditems.NETHERITE_WHIP),
+                Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                RecipeCategory.COMBAT,
+                Moditems.ADAMANTITE_WHIP)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_whip_smithing"));
+        SmithingTransformRecipeJsonBuilder.create(Ingredient.ofItems(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),
+                        Ingredient.ofItems(Moditems.ADAMANTITE_DOUBLE_BLADED_SCIMITAR),
+                        Ingredient.ofItems(Moditems.ADAMANTITE_INGOT),
+                        RecipeCategory.COMBAT,
+                        Moditems.ADAMANTITE_DOUBLE_BLADED_SCIMITAR)
+                .criterion(hasItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE),conditionsFromItem(Moditems.ADAMANTITE_UPGRADE_SMITHING_TEMPLATE))
+                .offerTo(exporter, new Identifier("dndinmc", "adamantite_double_bladed_scimitar_smithing"));
+
+
 
 
 

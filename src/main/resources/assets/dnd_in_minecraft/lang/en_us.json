@@ -50,6 +50,7 @@
   "item.dnd_in_minecraft.wooden_longbow": "Wooden Longbow",
   "item.dnd_in_minecraft.wooden_musket": "Wooden Musket",
   "item.dnd_in_minecraft.wooden_pistol": "Wooden Pistol",
+  "item.dnd_in_minecraft.wooden_double_bladed_scimitar": "Wooden Double Bladed Scimitar",
 
   "item.dnd_in_minecraft.stone_club": "Stone Club",
   "item.dnd_in_minecraft.stone_dagger": "Stone Dagger",
@@ -89,6 +90,7 @@
   "item.dnd_in_minecraft.stone_pistol": "Stone Pistol",
   "item.dnd_in_minecraft.stone_lance": "Stone Lance",
   "item.dnd_in_minecraft.stone_longsword": "Stone Longsword",
+  "item.dnd_in_minecraft.stone_double_bladed_scimitar": "Stone Double Bladed Scimitar",
 
   "item.dnd_in_minecraft.iron_club": "Iron Club",
   "item.dnd_in_minecraft.iron_dagger": "Iron Dagger",
@@ -128,6 +130,7 @@
   "item.dnd_in_minecraft.iron_pistol": "Iron Pistol",
   "item.dnd_in_minecraft.iron_lance": "Iron Lance",
   "item.dnd_in_minecraft.iron_longsword": "Iron Longsword",
+  "item.dnd_in_minecraft.iron_double_bladed_scimitar": "Iron Double Bladed Scimitar",
 
   "item.dnd_in_minecraft.diamond_club": "Diamond Club",
   "item.dnd_in_minecraft.diamond_dagger": "Diamond Dagger",
@@ -167,6 +170,7 @@
   "item.dnd_in_minecraft.diamond_pistol": "Diamond Pistol",
   "item.dnd_in_minecraft.diamond_lance": "Diamond Lance",
   "item.dnd_in_minecraft.diamond_longsword": "Diamond Longsword",
+  "item.dnd_in_minecraft.diamond_double_bladed_scimitar": "Diamond double Bladed Scimitar",
 
   "item.dnd_in_minecraft.netherite_club": "Netherite Club",
   "item.dnd_in_minecraft.netherite_dagger": "Netherite Dagger",
@@ -206,6 +210,7 @@
   "item.dnd_in_minecraft.netherite_pistol": "Netherite Pistol",
   "item.dnd_in_minecraft.netherite_lance": "Netherite Lance",
   "item.dnd_in_minecraft.netherite_longsword": "Netherite Longsword",
+  "item.dnd_in_minecraft.netherite_double_bladed_scimitar": "Netherite Double Bladed Scimitar",
 
   "item.dnd_in_minecraft.adamantite_club": "Adamantite Club",
   "item.dnd_in_minecraft.adamantite_dagger": "Adamantite Dagger",
@@ -245,13 +250,14 @@
   "item.dnd_in_minecraft.adamantite_pistol": "Adamantite Pistol",
   "item.dnd_in_minecraft.adamantite_lance": "Adamantite Lance",
   "item.dnd_in_minecraft.adamantite_longsword": "Adamantite Longsword",
+  "item.dnd_in_minecraft.adamantite_double_bladed_scimitar": "Adamantite Double Bladed Scimitar",
 
   "block.dnd_in_minecraft.silver_block": "Block of Silver",
   "block.dnd_in_minecraft.silver_ore": "Silver Ore",
 
   "itemgroup.currency": "Currencies",
   "itemgroup.silver": "Silver",
-  "itemgroup.dnd_weapons": "DnD Weapons"
+  "itemgroup.dnd_weapon": "DnD Weapons"
 
 
 }

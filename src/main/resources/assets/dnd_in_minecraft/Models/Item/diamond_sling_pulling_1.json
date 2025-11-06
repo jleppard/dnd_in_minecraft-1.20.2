@@ -1,0 +1,6 @@
+{
+  "parent": "dnd_in_minecraft:item/diamond_sling",
+  "textures": {
+    "layer0": "dnd_in_minecraft:item/diamond_sling_pulling_1"
+  }
+}

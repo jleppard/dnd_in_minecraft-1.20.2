@@ -1,0 +1,6 @@
+{
+  "parent": "dnd_in_minecraft:item/netherite_sling",
+  "textures": {
+    "layer0": "dnd_in_minecraft:item/netherite_sling_pulling_0"
+  }
+}

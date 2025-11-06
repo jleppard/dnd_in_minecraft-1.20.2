@@ -583,8 +583,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" @ ")
                 .input('@', Moditems.STONE_SCIMITAR)
                 .input('!', Items.STICK)
-                .criterion(hasItem(Items.IRON_INGOT),conditionsFromItem(Items.IRON_INGOT))
-                .offerTo(exporter, new Identifier(getRecipeName(Moditems.IRON_DOUBLE_BLADED_SCIMITAR)));
+                .criterion(hasItem(Moditems.STONE_SCIMITAR),conditionsFromItem(Moditems.STONE_SCIMITAR))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.STONE_DOUBLE_BLADED_SCIMITAR)));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.IRON_CLUB, 1)
                 .pattern("  @")
@@ -838,6 +838,285 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.IRON_INGOT),conditionsFromItem(Items.IRON_INGOT))
                 .offerTo(exporter, new Identifier(getRecipeName(Moditems.IRON_GLAIVE)));
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_CLUB, 1)
+                .pattern("  @")
+                .pattern(" ! ")
+                .pattern("!  ")
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_CLUB)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_GREATCLUB, 1)
+                .pattern("  #")
+                .pattern(" @ ")
+                .pattern("!  ")
+                .input('#', Items.GOLD_INGOT)
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_GREATCLUB)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_HANDAXE, 1)
+                .pattern(" @@")
+                .pattern(" !@")
+                .pattern(" ! ")
+
+
+
+
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_HANDAXE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_JAVELIN, 1)
+                .pattern("!@#")
+                .input('#', Items.GOLD_INGOT)
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_JAVELIN)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_LIGHT_HAMMER, 1)
+                .pattern(" @ ")
+                .pattern("@!@")
+                .pattern(" ! ")
+
+
+
+
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_LIGHT_HAMMER)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_MACE, 1)
+                .pattern("@#@")
+                .pattern("#!#")
+                .pattern(" ! ")
+                .input('#', Items.GOLD_INGOT)
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_MACE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_QUARTERSTAFF, 1)
+                .pattern(" @ ")
+                .pattern(" ! ")
+                .pattern(" @ ")
+
+
+
+
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_QUARTERSTAFF)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_SICKLE, 1)
+                .pattern(" @@")
+                .pattern(" ! ")
+                .pattern(" ! ")
+
+
+
+
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_SICKLE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_SPEAR, 1)
+                .pattern("!!#")
+                .input('#', Items.GOLD_INGOT)
+
+
+
+
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_SPEAR)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_BATTLEAXE, 1)
+                .pattern(" ##")
+                .pattern(" !#")
+                .pattern(" ! ")
+                .input('#', Items.GOLD_INGOT)
+
+
+
+
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_BATTLEAXE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_FLAIL, 1)
+                .pattern(" # ")
+                .pattern(" $ ")
+                .pattern(" ! ")
+                .input('#', Items.GOLD_INGOT)
+
+
+
+
+                .input('!', Items.STICK)
+                .input('$', Items.CHAIN)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_FLAIL)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_GREATAXE, 1)
+                .pattern("###")
+                .pattern("#!#")
+                .pattern(" ! ")
+                .input('#', Items.GOLD_INGOT)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_GREATAXE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_GREATSWORD, 1)
+                .pattern(" # ")
+                .pattern("###")
+                .pattern(" ! ")
+                .input('#', Items.GOLD_INGOT)
+
+
+
+
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_GREATSWORD)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_HALBERD, 1)
+                .pattern(" ##")
+                .pattern("@!#")
+                .pattern(" ! ")
+                .input('#', Items.GOLD_INGOT)
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_HALBERD)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_LANCE, 1)
+                .pattern(" ##")
+                .pattern(" !#")
+                .pattern("!  ")
+                .input('#', Items.GOLD_INGOT)
+
+
+
+
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_LANCE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_LONGSWORD, 1)
+                .pattern(" # ")
+                .pattern(" # ")
+                .pattern(" ! ")
+                .input('#', Items.GOLD_INGOT)
+
+
+
+
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_LONGSWORD)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_MAUL, 1)
+                .pattern("@#@")
+                .pattern("#!#")
+                .pattern(" ! ")
+                .input('#', Items.GOLD_INGOT)
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_MAUL)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_MORNINGSTAR, 1)
+                .pattern(" @ ")
+                .pattern("@#@")
+                .pattern(" ! ")
+                .input('#', Items.GOLD_INGOT)
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_MORNINGSTAR)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_PIKE, 1)
+                .pattern("  #")
+                .pattern(" ! ")
+                .pattern("!  ")
+                .input('#', Items.GOLD_INGOT)
+
+
+
+
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_PIKE)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_RAPIER, 1)
+                .pattern(" @ ")
+                .pattern("@@@")
+                .pattern(" ! ")
+
+
+
+
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_RAPIER)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_SCIMITAR, 1)
+                .pattern("  @")
+                .pattern(" # ")
+                .pattern(" ! ")
+                .input('#', Items.GOLD_INGOT)
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_SCIMITAR)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_SHORTSWORD, 1)
+                .pattern(" @ ")
+                .pattern(" # ")
+                .pattern(" ! ")
+                .input('#', Items.GOLD_INGOT)
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_SHORTSWORD)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_TRIDENT, 1)
+                .pattern(" #@")
+                .pattern("!#@")
+                .pattern(" #@")
+                .input('#', Items.GOLD_INGOT)
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_TRIDENT)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_WAR_PICK, 1)
+                .pattern(" #@")
+                .pattern(" ! ")
+                .pattern(" ! ")
+                .input('#', Items.GOLD_INGOT)
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_WAR_PICK)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_WHIP, 1)
+                .pattern("  @")
+                .pattern("%% ")
+                .pattern("!  ")
+
+
+
+
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .input('%', Items.STRING)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_WHIP)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_DAGGER, 1)
+                .pattern(" @ ")
+                .pattern(" ! ")
+
+
+
+
+                .input('@', Items.GOLD_NUGGET)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_DAGGER)));
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.GOLD_GLAIVE, 1)
+                .pattern("  #")
+                .pattern(" !#")
+                .pattern("!  ")
+                .input('#', Items.GOLD_INGOT)
+                .input('!', Items.STICK)
+                .criterion(hasItem(Items.GOLD_INGOT),conditionsFromItem(Items.GOLD_INGOT))
+                .offerTo(exporter, new Identifier(getRecipeName(Moditems.GOLD_GLAIVE)));
 
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, Moditems.DIAMOND_CLUB, 1)

@@ -5,6 +5,11 @@
   "item.dnd_in_minecraft.silver_ingot": "Silver Ingot",
   "item.dnd_in_minecraft.silver_nugget": "Silver Nugget",
   "item.dnd_in_minecraft.copper_nugget": "Copper Nugget",
+  "item.dnd_in_minecraft.adamantite_upgrade_smithing_template": "Adamantite Upgrade Smithing Template",
+  "item.dnd_in_minecraft.diamond_shard": "Diamond Shard",
+  "item.dnd_in_minecraft.adamantite_ingot": "Adamantite Ingot",
+  "item.dnd_in_minecraft.adamantite_nugget": "Adamantite Nugget",
+
 
   "item.dnd_in_minecraft.silver_axe": "Silver Axe",
   "item.dnd_in_minecraft.silver_pickaxe": "Silver Pickaxe",
@@ -132,6 +137,47 @@
   "item.dnd_in_minecraft.iron_longsword": "Iron Longsword",
   "item.dnd_in_minecraft.iron_double_bladed_scimitar": "Iron Double Bladed Scimitar",
 
+  "item.dnd_in_minecraft.gold_club": "Gold Club",
+  "item.dnd_in_minecraft.gold_dagger": "Gold Dagger",
+  "item.dnd_in_minecraft.gold_greatclub": "Gold Greatclub",
+  "item.dnd_in_minecraft.gold_handaxe": "Gold Handaxe",
+  "item.dnd_in_minecraft.gold_javelin": "Gold Javelin",
+  "item.dnd_in_minecraft.gold_light_hammer": "Gold Light Hammer",
+  "item.dnd_in_minecraft.gold_mace": "Gold Mace",
+  "item.dnd_in_minecraft.gold_quarterstaff": "Gold Quarterstaff",
+  "item.dnd_in_minecraft.gold_sickle": "Gold Sickle",
+  "item.dnd_in_minecraft.gold_spear": "Gold Spear",
+  "item.dnd_in_minecraft.gold_dart": "Gold Dart",
+  "item.dnd_in_minecraft.gold_light_crossbow": "Gold Light Crossbow",
+  "item.dnd_in_minecraft.gold_shortbow": "Gold Shortbow",
+  "item.dnd_in_minecraft.gold_sling": "Gold Sling",
+  "item.dnd_in_minecraft.gold_battleaxe": "Gold Battleaxe",
+  "item.dnd_in_minecraft.gold_flail": "Gold Flail",
+  "item.dnd_in_minecraft.gold_glaive": "Gold Glaive",
+  "item.dnd_in_minecraft.gold_greataxe": "Gold Greataxe",
+  "item.dnd_in_minecraft.gold_greatsword": "Gold Greatsword",
+  "item.dnd_in_minecraft.gold_halberd": "Gold Halberd",
+  "item.dnd_in_minecraft.gold_maul": "Gold Maul",
+  "item.dnd_in_minecraft.gold_morningstar": "Gold Morningstar",
+  "item.dnd_in_minecraft.gold_pike": "Gold Pike",
+  "item.dnd_in_minecraft.gold_rapier": "Gold Rapier",
+  "item.dnd_in_minecraft.gold_scimitar": "Gold Scimitar",
+  "item.dnd_in_minecraft.gold_shortsword": "Gold Shortsword",
+  "item.dnd_in_minecraft.gold_trident": "Gold Trident",
+  "item.dnd_in_minecraft.gold_warhammer": "Gold Warhammer",
+  "item.dnd_in_minecraft.gold_war_pick": "Gold War Pick",
+  "item.dnd_in_minecraft.gold_whip": "Gold Whip",
+  "item.dnd_in_minecraft.gold_blowgun": "Gold Blowgun",
+  "item.dnd_in_minecraft.gold_hand_crossbow": "Gold Hand Crossbow",
+  "item.dnd_in_minecraft.gold_heavy_crossbow": "Gold Heavy Crossbow",
+  "item.dnd_in_minecraft.gold_longbow": "Gold Longbow",
+  "item.dnd_in_minecraft.gold_musket": "Gold Musket",
+  "item.dnd_in_minecraft.gold_pistol": "Gold Pistol",
+  "item.dnd_in_minecraft.gold_lance": "Gold Lance",
+  "item.dnd_in_minecraft.gold_longsword": "Gold Longsword",
+  "item.dnd_in_minecraft.gold_double_bladed_scimitar": "Gold Double Bladed Scimitar",
+
+
   "item.dnd_in_minecraft.diamond_club": "Diamond Club",
   "item.dnd_in_minecraft.diamond_dagger": "Diamond Dagger",
   "item.dnd_in_minecraft.diamond_greatclub": "Diamond Greatclub",
@@ -257,7 +303,8 @@
 
   "itemgroup.currency": "Currencies",
   "itemgroup.silver": "Silver",
-  "itemgroup.dnd_weapon": "DnD Weapons"
+  "itemgroup.dnd_melee_weapon": "DnD Melee Weapons",
+  "itemgroup.dnd_ranged_weapon": "DnD Ranged Weapons"
 
 
 }

@@ -40,9 +40,36 @@ entries.add(ModBlocks.SILVER_ORE);
 
     }).build());
 
-    public static final ItemGroup DND_WEAPONS = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(DnD_in_Minecraft.MOD_ID, "dnd_weapon"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.dnd_weapon"))
+    public static final ItemGroup DND_RANGED_WEAPONS = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(DnD_in_Minecraft.MOD_ID, "dnd_ranged_weapon"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.dnd_ranged_weapon"))
+                    .icon(() -> new ItemStack(Moditems.GOLD_PIECE)) .entries((displayContext, entries) -> {
+                        entries.add(Moditems.WOODEN_SHORTBOW);
+                        entries.add(Moditems.WOODEN_LONGBOW);
+                        entries.add(Moditems.WOODEN_SLING);
+                        entries.add(Moditems.STONE_SHORTBOW);
+                        entries.add(Moditems.STONE_LONGBOW);
+                        entries.add(Moditems.STONE_SLING);
+                        entries.add(Moditems.IRON_SHORTBOW);
+                        entries.add(Moditems.IRON_LONGBOW);
+                        entries.add(Moditems.IRON_SLING);
+                        entries.add(Moditems.GOLD_SHORTBOW);
+                        entries.add(Moditems.GOLD_LONGBOW);
+                        entries.add(Moditems.GOLD_SLING);
+                        entries.add(Moditems.DIAMOND_SHORTBOW);
+                        entries.add(Moditems.DIAMOND_LONGBOW);
+                        entries.add(Moditems.DIAMOND_SLING);
+                        entries.add(Moditems.NETHERITE_SHORTBOW);
+                        entries.add(Moditems.NETHERITE_LONGBOW);
+                        entries.add(Moditems.NETHERITE_SLING);
+                        entries.add(Moditems.ADAMANTITE_SHORTBOW);
+                        entries.add(Moditems.ADAMANTITE_LONGBOW);
+                        entries.add(Moditems.ADAMANTITE_SLING);
+                    }).build());
+
+    public static final ItemGroup DND_MELEE_WEAPONS = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(DnD_in_Minecraft.MOD_ID, "dnd_melee_weapon"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.dnd_melee_weapon"))
                     .icon(() -> new ItemStack(Moditems.DIAMOND_GREATSWORD)) .entries((displayContext, entries) -> {
                         entries.add(Moditems.WOODEN_CLUB);
                         entries.add(Moditems.WOODEN_DAGGER);
@@ -133,6 +160,35 @@ entries.add(ModBlocks.SILVER_ORE);
                         entries.add(Moditems.IRON_WAR_PICK);
                         entries.add(Moditems.IRON_WARHAMMER);
                         entries.add(Moditems.IRON_DOUBLE_BLADED_SCIMITAR);
+                        entries.add(Moditems.GOLD_CLUB);
+                        entries.add(Moditems.GOLD_DAGGER);
+                        entries.add(Moditems.GOLD_GREATCLUB);
+                        entries.add(Moditems.GOLD_HANDAXE);
+                        entries.add(Moditems.GOLD_JAVELIN);
+                        entries.add(Moditems.GOLD_LIGHT_HAMMER);
+                        entries.add(Moditems.GOLD_MACE);
+                        entries.add(Moditems.GOLD_QUARTERSTAFF);
+                        entries.add(Moditems.GOLD_SICKLE);
+                        entries.add(Moditems.GOLD_SPEAR);
+                        entries.add(Moditems.GOLD_BATTLEAXE);
+                        entries.add(Moditems.GOLD_FLAIL);
+                        entries.add(Moditems.GOLD_GLAIVE);
+                        entries.add(Moditems.GOLD_GREATAXE);
+                        entries.add(Moditems.GOLD_GREATSWORD);
+                        entries.add(Moditems.GOLD_HALBERD);
+                        entries.add(Moditems.GOLD_LANCE);
+                        entries.add(Moditems.GOLD_LONGSWORD);
+                        entries.add(Moditems.GOLD_MAUL);
+                        entries.add(Moditems.GOLD_MORNINGSTAR);
+                        entries.add(Moditems.GOLD_PIKE);
+                        entries.add(Moditems.GOLD_RAPIER);
+                        entries.add(Moditems.GOLD_SCIMITAR);
+                        entries.add(Moditems.GOLD_SHORTSWORD);
+                        entries.add(Moditems.GOLD_TRIDENT);
+                        entries.add(Moditems.GOLD_WHIP);
+                        entries.add(Moditems.GOLD_WAR_PICK);
+                        entries.add(Moditems.GOLD_WARHAMMER);
+                        entries.add(Moditems.GOLD_DOUBLE_BLADED_SCIMITAR);
                         entries.add(Moditems.DIAMOND_CLUB);
                         entries.add(Moditems.DIAMOND_DAGGER);
                         entries.add(Moditems.DIAMOND_GREATCLUB);

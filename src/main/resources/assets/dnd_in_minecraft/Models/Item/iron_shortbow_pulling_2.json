@@ -1,0 +1,6 @@
+{
+  "parent": "dnd_in_minecraft:item/iron_longbow",
+  "textures": {
+    "layer0": "dnd_in_minecraft:item/iron_longbow_pulling_2"
+  }
+}

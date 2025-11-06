@@ -87,7 +87,7 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
     public static final Item WOODEN_BLOWGUN = registerItem("wooden_blowgun",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
     public static final Item WOODEN_HAND_CROSSBOW = registerItem("wooden_hand_crossbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
     public static final Item WOODEN_HEAVY_CROSSBOW = registerItem("wooden_heavy_crossbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
-    public static final Item WOODEN_LONGBOW = registerItem("wooden_longbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
+    public static final Item WOODEN_LONGBOW = registerItem("wooden_longbow",   new BowItem( new  FabricItemSettings().maxDamage(385)));
     public static final Item WOODEN_MUSKET = registerItem("wooden_musket",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
     public static final Item WOODEN_PISTOL = registerItem("wooden_pistol",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
     
@@ -183,7 +183,7 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
 
     public static final Item IRON_DART = registerItem("iron_dart",   new SwordItem(ToolMaterials.IRON,1,1, new  FabricItemSettings()));
     public static final Item IRON_LIGHT_CROSSBOW = registerItem("iron_light_crossbow",   new SwordItem(ToolMaterials.IRON,1,1, new  FabricItemSettings()));
-    public static final Item IRON_SHORTBOW = registerItem("iron_shortbow",   new SwordItem(ToolMaterials.IRON,1,1, new  FabricItemSettings()));
+    public static final Item IRON_SHORTBOW = registerItem("iron_shortbow",   new BowItem(new FabricItemSettings()));
     public static final Item IRON_SLING = registerItem("iron_sling",   new SwordItem(ToolMaterials.IRON,1,1, new  FabricItemSettings()));
 
 
@@ -193,7 +193,62 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
     public static final Item IRON_LONGBOW = registerItem("iron_longbow",   new SwordItem(ToolMaterials.IRON,1,1, new  FabricItemSettings()));
     public static final Item IRON_MUSKET = registerItem("iron_musket",   new SwordItem(ToolMaterials.IRON,1,1, new  FabricItemSettings()));
     public static final Item IRON_PISTOL = registerItem("iron_pistol",   new SwordItem(ToolMaterials.IRON,1,1, new  FabricItemSettings()));
-    
+    public static final Item GOLD_CLUB = registerItem("gold_club",   new SwordItem(ToolMaterials.GOLD,1,-1.6F, new  FabricItemSettings()));
+    public static final Item GOLD_DAGGER = registerItem("gold_dagger",   new SwordItem(ToolMaterials.GOLD,1,-0.8F, new  FabricItemSettings()));
+    public static final Item GOLD_GREATCLUB = registerItem("gold_greatclub",   new SwordItem(ToolMaterials.GOLD,3,-2.4F, new  FabricItemSettings()));
+    public static final Item GOLD_HANDAXE = registerItem("gold_handaxe",   new SwordItem(ToolMaterials.GOLD,2,-1.6F, new  FabricItemSettings()));
+    public static final Item GOLD_JAVELIN = registerItem("gold_javelin",   new SwordItem(ToolMaterials.GOLD,2,-2.4F, new  FabricItemSettings()));
+    public static final Item GOLD_LIGHT_HAMMER = registerItem("gold_light_hammer",   new SwordItem(ToolMaterials.GOLD,1,-1.6F, new  FabricItemSettings()));
+    public static final Item GOLD_MACE = registerItem("gold_mace",   new SwordItem(ToolMaterials.GOLD,2,-2.4F, new  FabricItemSettings()));
+    public static final Item GOLD_QUARTERSTAFF = registerItem("gold_quarterstaff",   new SwordItem(ToolMaterials.GOLD,2,-2.4F, new  FabricItemSettings()));
+    public static final Item GOLD_SICKLE = registerItem("gold_sickle",   new SwordItem(ToolMaterials.GOLD,1,-1.6F, new  FabricItemSettings()));
+    public static final Item GOLD_SPEAR = registerItem("gold_spear",   new SwordItem(ToolMaterials.GOLD,2,-2.4F, new  FabricItemSettings()));
+
+
+
+
+    public static final Item GOLD_BATTLEAXE = registerItem("gold_battleaxe",   new SwordItem(ToolMaterials.GOLD,3,-2.4F, new  FabricItemSettings()));
+    public static final Item GOLD_WARHAMMER = registerItem("gold_warhammer",   new SwordItem(ToolMaterials.GOLD,3,-2.4F, new  FabricItemSettings()));
+    public static final Item GOLD_FLAIL = registerItem("gold_flail",   new SwordItem(ToolMaterials.GOLD,3,-2.4F, new  FabricItemSettings()));
+    public static final Item GOLD_GLAIVE = registerItem("gold_glaive",   new SwordItem(ToolMaterials.GOLD,4,-3.2F, new  FabricItemSettings()));
+    public static final Item GOLD_GREATAXE = registerItem("gold_greataxe",   new SwordItem(ToolMaterials.GOLD,5,-3.2F, new  FabricItemSettings()));
+    public static final Item GOLD_GREATSWORD = registerItem("gold_greatsword",   new SwordItem(ToolMaterials.GOLD,5,-3.2F, new  FabricItemSettings()));
+    public static final Item GOLD_HALBERD = registerItem("gold_halberd",   new SwordItem(ToolMaterials.GOLD,4,-3.2F, new  FabricItemSettings()));
+    public static final Item GOLD_LANCE = registerItem("gold_lance",   new SwordItem(ToolMaterials.GOLD,4,-3.2F, new  FabricItemSettings()));
+    public static final Item GOLD_LONGSWORD = registerItem("gold_longsword",   new SwordItem(ToolMaterials.GOLD,3,-2.4F, new  FabricItemSettings()));
+    public static final Item GOLD_MAUL = registerItem("gold_maul",   new SwordItem(ToolMaterials.GOLD,5,-3.2F, new  FabricItemSettings()));
+    public static final Item GOLD_MORNINGSTAR = registerItem("gold_morningstar",   new SwordItem(ToolMaterials.GOLD,3,-2.4F, new  FabricItemSettings()));
+    public static final Item GOLD_PIKE = registerItem("gold_pike",   new SwordItem(ToolMaterials.GOLD,4,-3.2F, new  FabricItemSettings()));
+    public static final Item GOLD_RAPIER = registerItem("gold_rapier",   new SwordItem(ToolMaterials.GOLD,3,-1.6F, new  FabricItemSettings()));
+    public static final Item GOLD_SCIMITAR = registerItem("gold_scimitar",   new SwordItem(ToolMaterials.GOLD,2,-0.8F, new  FabricItemSettings()));
+    public static final Item GOLD_SHORTSWORD = registerItem("gold_shortsword",   new SwordItem(ToolMaterials.GOLD,2,-0.8F, new  FabricItemSettings()));
+    public static final Item GOLD_TRIDENT = registerItem("gold_trident",   new SwordItem(ToolMaterials.GOLD,3,-2.4F, new  FabricItemSettings()));
+    public static final Item GOLD_WAR_PICK = registerItem("gold_war_pick",   new SwordItem(ToolMaterials.GOLD,3,-2.4F, new  FabricItemSettings()));
+    public static final Item GOLD_WHIP = registerItem("gold_whip",   new SwordItem(ToolMaterials.GOLD,1,-1.6F, new  FabricItemSettings()));
+
+
+    public static final Item GOLD_YKLWA = registerItem("gold_yklwa",   new SwordItem(ToolMaterials.GOLD,3,-2.4F, new  FabricItemSettings()));
+
+
+    public static final Item GOLD_HOOPAK = registerItem("gold_hoopak",   new SwordItem(ToolMaterials.GOLD,2,-1.6F, new  FabricItemSettings()));
+    public static final Item GOLD_DOUBLE_BLADED_SCIMITAR = registerItem("gold_double_bladed_scimitar",   new SwordItem(ToolMaterials.GOLD,2,-1.6F, new  FabricItemSettings()));
+
+
+    public static final Item GOLD_DART = registerItem("gold_dart",   new SwordItem(ToolMaterials.GOLD,1,1, new  FabricItemSettings()));
+    public static final Item GOLD_LIGHT_CROSSBOW = registerItem("gold_light_crossbow",   new SwordItem(ToolMaterials.GOLD,1,1, new  FabricItemSettings()));
+    public static final Item GOLD_SHORTBOW = registerItem("gold_shortbow",   new BowItem(new FabricItemSettings()));
+    public static final Item GOLD_SLING = registerItem("gold_sling",   new SwordItem(ToolMaterials.GOLD,1,1, new  FabricItemSettings()));
+
+
+
+
+    public static final Item GOLD_BLOWGUN = registerItem("gold_blowgun",   new SwordItem(ToolMaterials.GOLD,1,1, new  FabricItemSettings()));
+    public static final Item GOLD_HAND_CROSSBOW = registerItem("gold_hand_crossbow",   new SwordItem(ToolMaterials.GOLD,1,1, new  FabricItemSettings()));
+    public static final Item GOLD_HEAVY_CROSSBOW = registerItem("gold_heavy_crossbow",   new SwordItem(ToolMaterials.GOLD,1,1, new  FabricItemSettings()));
+    public static final Item GOLD_LONGBOW = registerItem("gold_longbow",   new SwordItem(ToolMaterials.GOLD,1,1, new  FabricItemSettings()));
+    public static final Item GOLD_MUSKET = registerItem("gold_musket",   new SwordItem(ToolMaterials.GOLD,1,1, new  FabricItemSettings()));
+    public static final Item GOLD_PISTOL = registerItem("gold_pistol",   new SwordItem(ToolMaterials.GOLD,1,1, new  FabricItemSettings()));
+
     public static final Item DIAMOND_CLUB = registerItem("diamond_club",   new SwordItem(ToolMaterials.DIAMOND,1,-1.6F, new  FabricItemSettings()));
     public static final Item DIAMOND_DAGGER = registerItem("diamond_dagger",   new SwordItem(ToolMaterials.DIAMOND,1,-0.8F, new  FabricItemSettings()));
     public static final Item DIAMOND_GREATCLUB = registerItem("diamond_greatclub",   new SwordItem(ToolMaterials.DIAMOND,3,-1.6F, new  FabricItemSettings()));
@@ -228,7 +283,7 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
 
     public static final Item DIAMOND_DART = registerItem("diamond_dart",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
     public static final Item DIAMOND_LIGHT_CROSSBOW = registerItem("diamond_light_crossbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
-    public static final Item DIAMOND_SHORTBOW = registerItem("diamond_shortbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
+    public static final Item DIAMOND_SHORTBOW = registerItem("diamond_shortbow",   new BowItem(new FabricItemSettings()));
     public static final Item DIAMOND_SLING = registerItem("diamond_sling",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
 
 
@@ -276,15 +331,15 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
 
 
     public static final Item NETHERITE_DART = registerItem("netherite_dart",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
-    public static final Item NETHERITE_LIGHT_CROSSBOW = registerItem("netherite_light_crossbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
-    public static final Item NETHERITE_SHORTBOW = registerItem("netherite_shortbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
-    public static final Item NETHERITE_SLING = registerItem("netherite_sling",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
+    public static final Item NETHERITE_LIGHT_CROSSBOW = registerItem("netherite_light_crossbow",   new CrossbowItem(new FabricItemSettings()));
+    public static final Item NETHERITE_SHORTBOW = registerItem("netherite_shortbow",   new BowItem(new FabricItemSettings()));
+    public static final Item NETHERITE_SLING = registerItem("netherite_sling",   new BowItem(new FabricItemSettings()));
 
 
-    public static final Item NETHERITE_BLOWGUN = registerItem("netherite_blowgun",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
+    public static final Item NETHERITE_BLOWGUN = registerItem("netherite_blowgun",   new BowItem(new FabricItemSettings()));
     public static final Item NETHERITE_HAND_CROSSBOW = registerItem("netherite_hand_crossbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
     public static final Item NETHERITE_HEAVY_CROSSBOW = registerItem("netherite_heavy_crossbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
-    public static final Item NETHERITE_LONGBOW = registerItem("netherite_longbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
+    public static final Item NETHERITE_LONGBOW = registerItem("netherite_longbow",   new BowItem(new FabricItemSettings()));
     public static final Item NETHERITE_MUSKET = registerItem("netherite_musket",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
     public static final Item NETHERITE_PISTOL = registerItem("netherite_pistol",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
 
@@ -327,16 +382,15 @@ public static final Item WOODEN_SPEAR = registerItem("wooden_spear", new SwordIt
 
     public static final Item ADAMANTITE_DART = registerItem("adamantite_dart",   new SwordItem(ToolMaterials.NETHERITE,1,1, new  FabricItemSettings()));
     public static final Item ADAMANTITE_LIGHT_CROSSBOW = registerItem("adamantite_light_crossbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_SHORTBOW = registerItem("adamantite_shortbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_SLING = registerItem("adamantite_sling",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_SHORTBOW = registerItem("adamantite_shortbow",  new BowItem(new FabricItemSettings()));
+    public static final Item ADAMANTITE_SLING = registerItem("adamantite_sling",   new BowItem(new FabricItemSettings()));
 
 
 
-
-    public static final Item ADAMANTITE_BLOWGUN = registerItem("adamantite_blowgun",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_BLOWGUN = registerItem("adamantite_blowgun",   new BowItem(new FabricItemSettings()));
     public static final Item ADAMANTITE_HAND_CROSSBOW = registerItem("adamantite_hand_crossbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
     public static final Item ADAMANTITE_HEAVY_CROSSBOW = registerItem("adamantite_heavy_crossbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
-    public static final Item ADAMANTITE_LONGBOW = registerItem("adamantite_longbow",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
+    public static final Item ADAMANTITE_LONGBOW = registerItem("adamantite_longbow",   new BowItem(new FabricItemSettings()));
     public static final Item ADAMANTITE_MUSKET = registerItem("adamantite_musket",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
     public static final Item ADAMANTITE_PISTOL = registerItem("adamantite_pistol",   new SwordItem(ToolMaterials.WOOD,1,1, new  FabricItemSettings()));
 
